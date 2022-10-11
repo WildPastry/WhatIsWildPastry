@@ -6,7 +6,7 @@ jest.mock('./counterAPI', () => ({
   fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500))
 }));
 
-import { makeStore } from '../../app/store';
+import { makeStore } from '../../store/store';
 import Counter from './Counter';
 
 describe('<Counter />', () => {
