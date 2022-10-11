@@ -1,17 +1,15 @@
+@import './mixins/mixins.scss';
+@import './main.module.scss';
+
+// Reset
+* {
+  @include reset(0, 0, border-box, none, none);
+  font-family: $font;
+}
+
+// HTML / BODY
 html,
 body {
-  background: #202020;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  background: $dark;
+  color: $light;
 }
