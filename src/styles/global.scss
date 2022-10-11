@@ -1,0 +1,15 @@
+@import './mixins/mixins.scss';
+@import './main.module.scss';
+
+// Reset
+* {
+  @include reset(0, 0, border-box, none, none);
+  font-family: $font;
+}
+
+// HTML / BODY
+html,
+body {
+  background: $dark;
+  color: $light;
+}
