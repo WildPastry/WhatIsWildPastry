@@ -13,7 +13,7 @@ import { useState } from 'react';
 function Counter() {
   const dispatch = useAppDispatch();
   const count = useAppSelector(selectCount);
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState('0');
 
   const incrementValue = Number(incrementAmount) || 0;
 
@@ -47,7 +47,7 @@ function Counter() {
           Add Amount
         </button>
         <button
-          className={styles.asyncButton}
+          className={styles.button}
           onClick={() => dispatch(incrementAsync(incrementValue))}>
           Add Async
         </button>
