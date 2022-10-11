@@ -7,7 +7,7 @@ import {
   selectCount
 } from './counterSlice';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import styles from './Counter.module.css';
+import styles from './Counter.module.scss';
 import { useState } from 'react';
 
 function Counter() {

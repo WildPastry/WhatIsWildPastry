@@ -1,7 +1,7 @@
 import Counter from '../features/counter/Counter';
 import Head from 'next/head';
 import type { NextPage } from 'next';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Index.module.scss';
 
 const IndexPage: NextPage = () => {
   return (
