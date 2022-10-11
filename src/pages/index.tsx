@@ -14,6 +14,7 @@ const IndexPage: NextPage = () => {
         <img src='/logo.svg' className={styles.logo} alt='logo' />
         <Counter />
       </header>
+      <main />
     </div>
   );
 };
