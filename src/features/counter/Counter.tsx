@@ -1,6 +1,3 @@
-import { useState } from 'react';
-
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import {
   decrement,
   increment,
@@ -9,12 +6,14 @@ import {
   incrementIfOdd,
   selectCount
 } from './counterSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import styles from './Counter.module.css';
+import { useState } from 'react';
 
 function Counter() {
   const dispatch = useAppDispatch();
   const count = useAppSelector(selectCount);
-  const [ incrementAmount, setIncrementAmount ] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
 
@@ -24,16 +23,14 @@ function Counter() {
         <button
           className={styles.button}
           aria-label='Decrement value'
-          onClick={() => dispatch(decrement())}
-        >
+          onClick={() => dispatch(decrement())}>
           -
         </button>
         <span className={styles.value}>{count}</span>
         <button
           className={styles.button}
           aria-label='Increment value'
-          onClick={() => dispatch(increment())}
-        >
+          onClick={() => dispatch(increment())}>
           +
         </button>
       </div>
@@ -46,20 +43,17 @@ function Counter() {
         />
         <button
           className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
-        >
+          onClick={() => dispatch(incrementByAmount(incrementValue))}>
           Add Amount
         </button>
         <button
           className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(incrementValue))}
-        >
+          onClick={() => dispatch(incrementAsync(incrementValue))}>
           Add Async
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(incrementIfOdd(incrementValue))}
-        >
+          onClick={() => dispatch(incrementIfOdd(incrementValue))}>
           Add If Odd
         </button>
       </div>

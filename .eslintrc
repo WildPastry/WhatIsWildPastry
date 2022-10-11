@@ -1,4 +1,7 @@
 {
   "extends": "@wildpastry/eslint-config",
-  "ignorePatterns": ["**/models"]
+  "ignorePatterns": [
+    "**/models",
+    "**/tests"
+  ]
 }
