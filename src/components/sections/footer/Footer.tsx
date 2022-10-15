@@ -1,6 +1,10 @@
+import styles from './Footer.module.scss';
+
 const Footer: React.FC = (): JSX.Element => {
   return (
-    <footer>Footer</footer>
+    <footer aria-label='Footer Section' className={styles.footer}>
+      Footer
+    </footer>
   );
 };
 

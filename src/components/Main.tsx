@@ -34,7 +34,7 @@ const Main: React.FC = (): JSX.Element => {
 
   const renderMain = () => {
     return (
-      <main>
+      <main aria-label='Main Section'>
         <div className={shouldShowLoading}><Loading /></div>
         <Gallery />
         <Project />
