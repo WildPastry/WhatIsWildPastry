@@ -5,17 +5,16 @@ import {
   incrementByAmount,
   incrementIfOdd,
   selectCount
-} from './counterSlice';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
+} from '../../../redux/slices/counterSlice';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import styles from './Counter.module.scss';
 import { useState } from 'react';
 
-function Counter() {
+const Counter: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
-  const count = useAppSelector(selectCount);
+  const count: number = useAppSelector(selectCount);
   const [incrementAmount, setIncrementAmount] = useState('0');
-
-  const incrementValue = Number(incrementAmount) || 0;
+  const incrementValue: number = Number(incrementAmount) || 0;
 
   return (
     <div>
@@ -39,8 +38,7 @@ function Counter() {
           className={styles.textbox}
           aria-label='Set increment amount'
           value={incrementAmount}
-          onChange={(e) => setIncrementAmount(e.target.value)}
-        />
+          onChange={(e) => setIncrementAmount(e.target.value)} />
         <button
           className={styles.button}
           onClick={() => dispatch(incrementByAmount(incrementValue))}>
@@ -59,6 +57,8 @@ function Counter() {
       </div>
     </div>
   );
-}
+};
 
+// EXPORT Counter
+Counter.displayName = 'WILDPASTRY | Counter';
 export default Counter;

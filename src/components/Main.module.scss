@@ -1,0 +1,8 @@
+.showLoading {
+  opacity: 1;
+}
+
+.hideLoading {
+  transition: opacity 1s;
+  opacity: 0;
+}

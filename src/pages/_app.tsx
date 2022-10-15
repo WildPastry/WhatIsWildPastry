@@ -2,12 +2,16 @@ import '../styles/global.scss';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 
-import store from '../store/store';
+import store from '../redux/store';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
       <Component {...pageProps} />
     </Provider>
   );
-}
+};
+
+// EXPORT App
+App.displayName = 'App';
+export default App;

@@ -1,5 +1,8 @@
 {
-  "extends": "@wildpastry/eslint-config",
+  "extends": [
+    "@wildpastry/eslint-config",
+    "plugin:@next/next/recommended"
+  ],
   "ignorePatterns": [
     "**/models",
     "**/tests"

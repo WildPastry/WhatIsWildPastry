@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Project from './Project';
 
-describe('<Counter />', () => {
+describe('<Project />', () => {
   it('renders the component', () => {
 
     render(

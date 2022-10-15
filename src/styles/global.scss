@@ -1,5 +1,5 @@
-@import './mixins/mixins.scss';
-@import './main.module.scss';
+@import './mixins/control.scss';
+@import './styles.module.scss';
 
 // Reset
 * {
@@ -10,6 +10,6 @@
 // HTML / BODY
 html,
 body {
-  background: $dark;
+  background: $grey;
   color: $light;
 }

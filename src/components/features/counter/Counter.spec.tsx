@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Counter from './Counter';
 import { Provider } from 'react-redux';
-import { makeStore } from '../../store/store';
+import { makeStore } from '../../../store';
 import user from '@testing-library/user-event';
 
 jest.mock('./counterAPI', () => ({
