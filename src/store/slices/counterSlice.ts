@@ -1,12 +1,8 @@
-import type { AppState, AppThunk } from '../../store/store';
+import type { AppState, AppThunk } from '..';
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchCount } from './counterAPI';
+import { fetchCount } from '../../features/counter/counterAPI';
 
-export interface CounterState {
-  value: number
-  status: 'idle' | 'loading' | 'failed'
-}
-
+// Set initialState
 const initialState: CounterState = {
   value: 0,
   status: 'idle'
@@ -28,6 +24,9 @@ export const incrementAsync = createAsyncThunk(
   }
 );
 
+/*
+ * Create counterSlice with combined actions
+ */
 export const counterSlice = createSlice({
   name: 'counter',
   initialState,
@@ -89,4 +88,5 @@ export const incrementIfOdd =
     }
   };
 
+// Export reducer
 export default counterSlice.reducer;

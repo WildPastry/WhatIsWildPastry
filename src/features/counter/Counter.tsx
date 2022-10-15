@@ -5,7 +5,7 @@ import {
   incrementByAmount,
   incrementIfOdd,
   selectCount
-} from './counterSlice';
+} from '../../store/slices/counterSlice';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import styles from './Counter.module.scss';
 import { useState } from 'react';

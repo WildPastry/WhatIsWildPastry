@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-duplicate-imports */
-import type { AppDispatch, AppState } from './store';
+import type { AppDispatch, AppState } from '.';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef } from 'react';
 import type { ChangeEvent } from 'react';
