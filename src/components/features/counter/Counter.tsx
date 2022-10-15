@@ -5,8 +5,8 @@ import {
   incrementByAmount,
   incrementIfOdd,
   selectCount
-} from '../../../store/slices/counterSlice';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+} from '../../../redux/slices/counterSlice';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import styles from './Counter.module.scss';
 import { useState } from 'react';
 
