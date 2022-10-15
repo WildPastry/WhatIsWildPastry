@@ -1,6 +1,6 @@
 import type { AppState, AppThunk } from '..';
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchCount } from '../../features/counter/counterAPI';
+import { fetchCount } from '../../components/features/counter/counterAPI';
 
 // Set initialState
 const initialState: CounterState = {
