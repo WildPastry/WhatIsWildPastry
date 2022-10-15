@@ -1,7 +1,9 @@
-const Nav: React.FC = () => {
-  return <section>Nav</section>;
+const Nav: React.FC = (): JSX.Element => {
+  return (
+    <section>Nav</section>
+  );
 };
 
 // EXPORT Nav
-Nav.displayName = 'WILDPASTRY | Navigation';
+Nav.displayName = 'WILDPASTRY | Nav';
 export default Nav;
