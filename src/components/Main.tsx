@@ -13,29 +13,32 @@ const Main: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   // UseSelector for reading page loading state
-  const pageData = useSelector((state: AppState) => {
+  const pageData = useSelector((state: AppState): Loading => {
     return state.loading;
   });
 
   // Callback / dispatch and effect for setting page loading state
-  const pageLoading = useCallback((loading: boolean) => {
+  const pageLoading = useCallback((loading: boolean): void => {
     setTimeout(() => {
       dispatch(setLoading(loading));
     }, 1000);
   }, []);
 
-  useEffect(() => {
+  useEffect((): void => {
     pageLoading(false);
   }, [pageLoading]);
 
   // Spinner logic
   const shouldShowLoading = pageData.isLoading
-    ? styles.showLoading : styles.hideLoading;
+    ? styles.showLoading
+    : styles.hideLoading;
 
-  const renderMain = () => {
+  const renderMain = (): JSX.Element => {
     return (
       <main aria-label='Main Section'>
-        <div className={shouldShowLoading}><Loading /></div>
+        <section className={shouldShowLoading}>
+          <Loading />
+        </section>
         <Gallery />
         <Project />
         <About />

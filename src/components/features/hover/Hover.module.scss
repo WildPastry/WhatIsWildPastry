@@ -1,5 +1,11 @@
 @import '../../../styles/variables/colour.module';
 
-.hover {
+.showImage {
+  // display: block;
+  background: $grey;
+}
+
+.hideImage {
   background: $purple;
+  // display: none;
 }
