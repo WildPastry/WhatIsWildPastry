@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Gallery from './Gallery';
 
-describe('<Counter />', () => {
+describe('<Gallery />', () => {
   it('renders the component', () => {
 
     render(
