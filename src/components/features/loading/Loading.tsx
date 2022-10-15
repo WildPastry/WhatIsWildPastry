@@ -4,21 +4,21 @@ const Loading: React.FC = (): JSX.Element => {
   return (
     <>
       <div className={styles.loader}>
-        <div className={styles.loaderInner}>
-          <div className={styles.loaderLineWrap}>
-            <div className={styles.loaderLine} />
+        <div className={styles.loader__inner}>
+          <div className={styles.loader__linewrap}>
+            <div className={styles.loader__line} />
           </div>
-          <div className={styles.loaderLineWrap}>
-            <div className={styles.loaderLine} />
+          <div className={styles.loader__linewrap}>
+            <div className={styles.loader__line} />
           </div>
-          <div className={styles.loaderLineWrap}>
-            <div className={styles.loaderLine} />
+          <div className={styles.loader__linewrap}>
+            <div className={styles.loader__line} />
           </div>
-          <div className={styles.loaderLineWrap}>
-            <div className={styles.loaderLine} />
+          <div className={styles.loader__linewrap}>
+            <div className={styles.loader__line} />
           </div>
-          <div className={styles.loaderLineWrap}>
-            <div className={styles.loaderLine} />
+          <div className={styles.loader__linewrap}>
+            <div className={styles.loader__line} />
           </div>
         </div>
       </div>
