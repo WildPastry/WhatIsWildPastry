@@ -17,7 +17,7 @@ const Counter: React.FC = (): JSX.Element => {
   const incrementValue: number = Number(incrementAmount) || 0;
 
   return (
-    <div>
+    <section aria-label='Counter Section'>
       <div className={styles.row}>
         <button
           className={styles.button}
@@ -55,7 +55,7 @@ const Counter: React.FC = (): JSX.Element => {
           Add If Odd
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

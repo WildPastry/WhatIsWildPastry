@@ -3,7 +3,7 @@ import styles from './Nav.module.scss';
 const Nav: React.FC = (): JSX.Element => {
   return (
     <section aria-label='Navigation Section' className={styles.nav}>
-      Nav
+      <h3>NAV</h3>
     </section>
   );
 };

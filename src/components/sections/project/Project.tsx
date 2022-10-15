@@ -1,6 +1,8 @@
 const Project: React.FC = (): JSX.Element => {
   return (
-    <section>Project</section>
+    <section aria-label='Project Section'>
+      <h3>PROJECT</h3>
+    </section>
   );
 };
 

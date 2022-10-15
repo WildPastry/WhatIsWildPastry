@@ -1,6 +1,8 @@
 const Gallery: React.FC = (): JSX.Element => {
   return (
-    <section>Gallery</section>
+    <section aria-label='Gallery Section'>
+      <h3>GALLERY</h3>
+    </section>
   );
 };
 
