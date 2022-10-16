@@ -3,7 +3,7 @@
 }
 
 .hideLoading {
-  transition: opacity 1s;
-  opacity: 0;
   display: none;
+  opacity: 0;
+  transition: opacity 1s;
 }

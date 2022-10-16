@@ -1,17 +1,17 @@
 @import '../../../styles/variables/colour.module';
 
 .loader {
+  align-items: center;
   background: $dark;
   bottom: 0;
+  display: flex;
+  justify-content: center;
   left: 0;
   overflow: hidden;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   &__inner {
     bottom: 0;
     height: 100px;
@@ -23,8 +23,8 @@
     width: 100px;
   }
   &__line {
-    border: 4px solid transparent;
     border-radius: 100%;
+    border: 4px solid transparent;
     box-sizing: border-box;
     height: 100px;
     left: 0;
@@ -53,8 +53,8 @@
     & .loader__line {
       border-color: $peach;
       height: 90px;
-      width: 90px;
       top: 7px;
+      width: 90px;
     }
   }
   &:nth-child(2) {
@@ -62,8 +62,8 @@
     & .loader__line {
       border-color: $yellow;
       height: 76px;
-      width: 76px;
       top: 14px;
+      width: 76px;
     }
   }
   &:nth-child(3) {
@@ -71,8 +71,8 @@
     & .loader__line {
       border-color: $pink;
       height: 62px;
-      width: 62px;
       top: 21px;
+      width: 62px;
     }
   }
   &:nth-child(4) {
@@ -80,8 +80,8 @@
     & .loader__line {
       border-color: $teal;
       height: 48px;
-      width: 48px;
       top: 28px;
+      width: 48px;
     }
   }
   &:nth-child(5) {
@@ -89,8 +89,8 @@
     & .loader__line {
       border-color: $blue;
       height: 34px;
-      width: 34px;
       top: 35px;
+      width: 34px;
     }
   }
 }

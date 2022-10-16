@@ -5,12 +5,12 @@
   justify-content: center;
   margin: 150px auto;
   &__title {
+    color: $yellow;
     cursor: default;
     text-align: center;
-    color: $yellow;
   }
   &__image {
-    position: absolute;
     pointer-events: none;
+    position: absolute;
   }
 }
