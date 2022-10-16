@@ -1,16 +1,16 @@
 @import '../../../styles/variables/colour.module';
 
 .hover {
-  height: 300px;
-  background: $grey-200;
-}
-
-.showImage {
-  // display: block;
-  background: $grey;
-}
-
-.hideImage {
-  background: $purple;
-  // display: none;
+  display: flex;
+  justify-content: center;
+  margin: 150px auto;
+  &__title {
+    cursor: default;
+    text-align: center;
+    color: $yellow;
+  }
+  &__image {
+    position: absolute;
+    pointer-events: none;
+  }
 }

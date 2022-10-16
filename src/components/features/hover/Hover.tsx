@@ -1,15 +1,10 @@
-/* eslint-disable no-console */
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import pastry from './../../../../public/images/pastry.jpg';
+import Image from 'next/future/image';
 import styles from './Hover.module.scss';
+import { useState } from 'react';
 
 const Hover: React.FC = (): JSX.Element => {
-  const [ hover, setHover ] = useState(false);
-
-  useEffect((): void => {
-    console.log(hover);
-  }, [hover]);
+  const [hover, setHover] = useState(false);
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   const showHover = (): void => {
     setHover(true);
@@ -19,12 +14,38 @@ const Hover: React.FC = (): JSX.Element => {
     setHover(false);
   };
 
+  const handleMouseMove = (event: {
+    clientX: number;
+    clientY: number;
+  }): void => {
+    setCoords({
+      x: event.clientX - 100,
+      y: event.clientY - 100
+    });
+  };
+
   return (
-    <section aria-label='Hover Section'>
-      <h3 onMouseEnter={showHover} onMouseLeave={hideHover} className={styles.hover}>
+    <section aria-label='Hover Section' className={styles.hover}>
+      <h3
+        onMouseMove={handleMouseMove}
+        onMouseEnter={showHover}
+        onMouseLeave={hideHover}
+        className={styles.hover__title}>
         HOVER
       </h3>
-      <Image src={pastry} alt='Pastry' width={200} height={200} />
+      {hover ? (
+        <Image
+          src={'/images/pastry.jpg'}
+          alt='Pastry'
+          width={200}
+          height={200}
+          style={{
+            left: coords.x,
+            top: coords.y
+          }}
+          className={styles.hover__image}
+        />
+      ) : null}
     </section>
   );
 };

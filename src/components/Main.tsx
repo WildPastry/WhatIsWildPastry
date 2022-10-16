@@ -33,7 +33,7 @@ const Main: React.FC = (): JSX.Element => {
     ? styles.showLoading
     : styles.hideLoading;
 
-  const renderMain = (): JSX.Element => {
+  const renderPage = (): JSX.Element => {
     return (
       <main aria-label='Main Section'>
         <section className={shouldShowLoading}>
@@ -46,7 +46,7 @@ const Main: React.FC = (): JSX.Element => {
     );
   };
   // Error logic
-  return pageData.isError ? <div>Error</div> : renderMain();
+  return pageData.isError ? <div>Error</div> : renderPage();
 };
 
 // EXPORT Main
