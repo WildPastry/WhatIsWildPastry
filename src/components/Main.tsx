@@ -22,7 +22,7 @@ const Main: React.FC = (): JSX.Element => {
   const pageLoading = useCallback((loading: boolean): void => {
     setTimeout(() => {
       dispatch(setLoading(loading));
-    }, 1500);
+    }, 1000);
   }, []);
 
   useEffect((): void => {
