@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import About from './sections/about/About';
 import { AppState } from '../redux/store';
 import Gallery from './sections/gallery/Gallery';
@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 
 const Main: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
+  const [loader, setLoader] = useState(true);
 
   // UseSelector for reading page loading state
   const pageData = useSelector((state: AppState): Loading => {
@@ -21,7 +22,7 @@ const Main: React.FC = (): JSX.Element => {
   const pageLoading = useCallback((loading: boolean): void => {
     setTimeout(() => {
       dispatch(setLoading(loading));
-    }, 1000);
+    }, 1500);
   }, []);
 
   useEffect((): void => {
@@ -29,16 +30,20 @@ const Main: React.FC = (): JSX.Element => {
   }, [pageLoading]);
 
   // Spinner logic
-  const shouldShowLoading = pageData.isLoading
+  const transitionLoader = pageData.isLoading
     ? styles.showLoading
     : styles.hideLoading;
 
   const renderPage = (): JSX.Element => {
     return (
       <main aria-label='Main Section'>
-        <section className={shouldShowLoading}>
-          <Loading />
-        </section>
+        {loader ? (
+          <section
+            className={transitionLoader}
+            onTransitionEnd={() => setLoader(false)}>
+            <Loading />
+          </section>
+        ) : null}
         <Gallery />
         <Project />
         <About />
