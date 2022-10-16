@@ -1,8 +1,6 @@
-import styles from './Nav.module.scss';
-
 const Nav: React.FC = (): JSX.Element => {
   return (
-    <section aria-label='Navigation Section' className={styles.nav}>
+    <section aria-label='Navigation Section'>
       <h3>NAV</h3>
     </section>
   );

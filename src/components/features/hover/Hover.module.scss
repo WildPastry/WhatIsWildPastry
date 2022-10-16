@@ -1,5 +1,10 @@
 @import '../../../styles/variables/colour.module';
 
+.hover {
+  height: 300px;
+  background: $grey-200;
+}
+
 .showImage {
   // display: block;
   background: $grey;
