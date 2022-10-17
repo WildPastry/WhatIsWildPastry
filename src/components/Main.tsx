@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import About from './sections/about/About';
 import { AppState } from '../redux/store';
+import Counter from './features/counter/Counter';
 import Gallery from './sections/gallery/Gallery';
 import Loading from './features/loading/Loading';
 import Project from './sections/project/Project';
@@ -44,6 +45,7 @@ const Main: React.FC = (): JSX.Element => {
             <Loading />
           </section>
         ) : null}
+        <Counter />
         <Gallery />
         <Project />
         <About />

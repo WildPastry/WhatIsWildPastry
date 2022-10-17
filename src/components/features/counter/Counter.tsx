@@ -20,6 +20,7 @@ const Counter: React.FC = (): JSX.Element => {
     <section aria-label='Counter Section'>
       <div className={styles.row}>
         <button
+          role='button'
           className={styles.button}
           aria-label='Decrement value'
           onClick={() => dispatch(decrement())}>
@@ -27,6 +28,7 @@ const Counter: React.FC = (): JSX.Element => {
         </button>
         <span className={styles.value}>{count}</span>
         <button
+          role='button'
           className={styles.button}
           aria-label='Increment value'
           onClick={() => dispatch(increment())}>
