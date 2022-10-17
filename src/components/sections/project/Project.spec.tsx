@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import Project from './Project';
+import { render } from '@testing-library/react';
 
 describe('<Project />', () => {
   it('renders the component', () => {
@@ -8,7 +8,6 @@ describe('<Project />', () => {
       <Project />
     );
 
-    expect(screen.getByText('Project')).toBeInTheDocument();
   });
 
 });

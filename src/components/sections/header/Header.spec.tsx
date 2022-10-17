@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import Header from './Header';
+import { render } from '@testing-library/react';
 
 describe('<Header />', () => {
   it('renders the component', () => {
@@ -8,7 +8,6 @@ describe('<Header />', () => {
       <Header />
     );
 
-    expect(screen.getByText('Header')).toBeInTheDocument();
   });
 
 });

@@ -1,11 +1,11 @@
-import About from './About';
+import Main from './Main';
 import { render } from '@testing-library/react';
 
-describe('<About />', () => {
+describe('<Main />', () => {
   it('renders the component', () => {
 
     render(
-      <About />
+      <Main />
     );
 
   });

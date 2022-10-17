@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import '@testing-library/jest-dom';
 import { loadEnvConfig } from '@next/env';
 
