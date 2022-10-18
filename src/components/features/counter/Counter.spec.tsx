@@ -5,7 +5,7 @@ import { makeStore } from '../../../redux/store';
 import user from '@testing-library/user-event';
 
 jest.mock('./counterAPI', () => ({
-  fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500))
+  fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 100))
 }));
 
 describe('<Counter />', () => {
@@ -30,7 +30,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.click(screen.getByRole('button', { name: /Decrement value/i }));
+    user.click(screen.getByRole('button', { name: 'Decrement value' }));
 
     expect(screen.getByText('-1')).toBeInTheDocument();
   });

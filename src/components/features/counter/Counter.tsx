@@ -26,7 +26,7 @@ const Counter: React.FC = (): JSX.Element => {
           onClick={() => dispatch(decrement())}>
           -
         </button>
-        <span className={styles.value}>{count}</span>
+        <div className={styles.value}>{count}</div>
         <button
           role='button'
           className={styles.button}
