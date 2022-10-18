@@ -30,7 +30,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.click(screen.getByRole('button', { name: /Decrement value/u }));
+    user.click(screen.getByRole('button', { name: /Decrement value/i }));
 
     expect(screen.getByText('-1')).toBeInTheDocument();
   });
