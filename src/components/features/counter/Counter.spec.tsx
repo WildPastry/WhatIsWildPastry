@@ -5,7 +5,7 @@ import { makeStore } from '../../../redux/store';
 import user from '@testing-library/user-event';
 
 jest.mock('./counterAPI', () => ({
-  fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 100))
+  fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500))
 }));
 
 describe('<Counter />', () => {
@@ -30,7 +30,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.click(screen.getByRole('button', { name: 'Decrement value' }));
+    user.click(screen.getByRole('button', { name: /Decrement value/u }));
 
     expect(screen.getByText('-1')).toBeInTheDocument();
   });
@@ -58,7 +58,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.type(screen.getByLabelText(/set increment amount/u), '{backspace}5');
+    user.type(screen.getByLabelText(/Set increment amount/u), '{backspace}5');
     user.click(screen.getByRole('button', { name: /Add amount/u }));
 
     expect(screen.getByText('5')).toBeInTheDocument();
@@ -73,7 +73,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.type(screen.getByLabelText(/set increment amount/u), '{backspace}3');
+    user.type(screen.getByLabelText(/Set increment amount/u), '{backspace}3');
     user.click(screen.getByRole('button', { name: /Add async/u }));
 
     await expect(screen.findByText('3')).resolves.toBeInTheDocument();

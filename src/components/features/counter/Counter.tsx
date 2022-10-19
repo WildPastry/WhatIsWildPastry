@@ -42,17 +42,23 @@ const Counter: React.FC = (): JSX.Element => {
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)} />
         <button
+          role='button'
           className={styles.button}
+          aria-label='Add amount'
           onClick={() => dispatch(incrementByAmount(incrementValue))}>
           Add Amount
         </button>
         <button
+          role='button'
           className={styles.button}
+          aria-label='Add async'
           onClick={() => dispatch(incrementAsync(incrementValue))}>
           Add Async
         </button>
         <button
+          role='button'
           className={styles.button}
+          aria-label='Add if odd'
           onClick={() => dispatch(incrementIfOdd(incrementValue))}>
           Add If Odd
         </button>
