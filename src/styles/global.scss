@@ -17,6 +17,29 @@ body {
   width: 100%;
 }
 
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Selection
+::selection {
+	color: $purple;
+}
+
+::-moz-selection {
+	color: $purple;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+	background: $purple;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $purple-150;
+}
+
 // Headings
 h1 {
   font-size: 2.5rem;
