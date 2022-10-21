@@ -12,6 +12,5 @@ describe('<Index />', () => {
         <Index />
       </Provider>
     );
-
   });
 });

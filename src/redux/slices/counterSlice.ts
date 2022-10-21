@@ -33,7 +33,6 @@ export const counterSlice = createSlice({
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     increment: (state) => {
-
       /*
        * Redux Toolkit allows us to write "mutating" logic in reducers. It
        * doesn't actually mutate the state because it uses the Immer library,
@@ -81,7 +80,8 @@ export const selectCount = (state: AppState) => state.counter.value;
  * Here's an example of conditionally dispatching actions based on current state.
  */
 export const incrementIfOdd =
-  (amount: number): AppThunk => (dispatch, getState) => {
+  (amount: number): AppThunk =>
+  (dispatch, getState) => {
     const currentValue = selectCount(getState());
     if (currentValue % 2 === 1) {
       dispatch(incrementByAmount(amount));

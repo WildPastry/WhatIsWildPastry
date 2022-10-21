@@ -5,7 +5,10 @@ import { makeStore } from '../../../redux/store';
 import user from '@testing-library/user-event';
 
 jest.mock('./counterAPI', () => ({
-  fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500))
+  fetchCount: (amount: number) =>
+    new Promise<{ data: number }>((resolve) =>
+      setTimeout(() => resolve({ data: amount }), 500)
+    )
 }));
 
 describe('<Counter />', () => {

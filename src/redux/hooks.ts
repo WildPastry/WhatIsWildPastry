@@ -7,7 +7,9 @@ import { useEffect, useRef } from 'react';
 import type { ChangeEvent } from 'react';
 
 export const useForm =
-  <TContent>(defaultValues: TContent) => (handler: (content: TContent) => void) => async (event: ChangeEvent<HTMLFormElement>) => {
+  <TContent>(defaultValues: TContent) =>
+  (handler: (content: TContent) => void) =>
+  async (event: ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.persist();
 
@@ -30,7 +32,7 @@ export const useInterval = (callback: Function, delay: number) => {
   const savedCallback = useRef<Function>();
   useEffect(() => {
     savedCallback.current = callback;
-  }, [ callback ]);
+  }, [callback]);
   useEffect(() => {
     const handler = (...args: any) => savedCallback.current?.(...args);
 
@@ -38,7 +40,7 @@ export const useInterval = (callback: Function, delay: number) => {
       const id = setInterval(handler, delay);
       return () => clearInterval(id);
     }
-  }, [ delay ]);
+  }, [delay]);
 };
 
 // Use throughout  app instead of `useDispatch` and `useSelector`

@@ -40,7 +40,8 @@ const Counter: React.FC = (): JSX.Element => {
           className={styles.textbox}
           aria-label='Set increment amount'
           value={incrementAmount}
-          onChange={(e) => setIncrementAmount(e.target.value)} />
+          onChange={(e) => setIncrementAmount(e.target.value)}
+        />
         <button
           role='button'
           className={styles.button}
