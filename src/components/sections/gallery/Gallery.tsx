@@ -1,5 +1,3 @@
-import styles from './Gallery.module.scss';
-
 const Gallery: React.FC = (): JSX.Element => {
   return (
     <section aria-label='Gallery Section'>

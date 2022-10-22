@@ -1,10 +1,8 @@
-/* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-duplicate-imports */
+/* eslint-disable consistent-return */
 import type { AppDispatch, AppState } from './store';
+import { ChangeEvent, useEffect, useRef } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { useEffect, useRef } from 'react';
-import type { ChangeEvent } from 'react';
 
 export const useForm =
   <TContent>(defaultValues: TContent) =>
