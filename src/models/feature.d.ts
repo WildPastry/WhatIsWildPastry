@@ -11,4 +11,6 @@ interface Loading {
 interface HoverImage {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 }

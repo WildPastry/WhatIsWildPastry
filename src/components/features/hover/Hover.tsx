@@ -37,8 +37,8 @@ const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
         <Image
           src={props.src}
           alt={props.alt}
-          width={200}
-          height={200}
+          height={props.height}
+          width={props.width}
           style={{
             left: coords.x,
             top: coords.y

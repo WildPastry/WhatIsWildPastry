@@ -4,7 +4,12 @@ const About: React.FC = (): JSX.Element => {
   return (
     <section aria-label='About Section'>
       <h3>ABOUT</h3>
-      <Hover alt='static-image' src='/images/pastry.jpg' />
+      <Hover
+        alt='static-image'
+        src='/images/pastry.jpg'
+        height={200}
+        width={200}
+      />
     </section>
   );
 };
