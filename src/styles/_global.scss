@@ -1,5 +1,6 @@
-@import './mixins/control.scss';
-@import './styles.module.scss';
+@import './mixins/control';
+@import './variables/colour.module';
+@import './variables/font.module';
 
 // Reset
 * {

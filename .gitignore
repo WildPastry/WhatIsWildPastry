@@ -15,7 +15,7 @@
 
 # development
 /dev
-/utilities/config.json
+/utilities
 
 # production
 /build

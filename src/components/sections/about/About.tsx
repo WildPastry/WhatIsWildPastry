@@ -6,7 +6,7 @@ const About: React.FC = (): JSX.Element => {
       <h3>ABOUT</h3>
       <Hover
         alt='static-image'
-        src='/images/pastry.jpg'
+        src='/img/pastry.jpg'
         height={200}
         width={200}
       />
