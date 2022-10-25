@@ -7,3 +7,8 @@ interface Loading {
   isLoading: boolean;
   isError: boolean;
 }
+
+interface HoverImage {
+  src: string;
+  alt: string;
+}

@@ -2,7 +2,7 @@ import Image from 'next/future/image';
 import styles from './Hover.module.scss';
 import { useState } from 'react';
 
-const Hover: React.FC = (): JSX.Element => {
+const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
   const [hover, setHover] = useState(false);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
@@ -35,8 +35,8 @@ const Hover: React.FC = (): JSX.Element => {
       </h3>
       {hover ? (
         <Image
-          src={'/images/pastry.jpg'}
-          alt='Pastry'
+          src={props.src}
+          alt={props.alt}
           width={200}
           height={200}
           style={{
