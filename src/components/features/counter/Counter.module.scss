@@ -1,8 +1,8 @@
-@import '../../styles/styles.module.scss';
+@import '../../../styles/variables/colour.module';
 
 .row {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
@@ -17,34 +17,33 @@
 
 .value {
   font-size: 78px;
+  margin-top: 2px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-top: 2px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .button {
   appearance: none;
+  background-color: $grey;
   background: none;
-  font-size: 32px;
-  padding-left: 12px;
-  padding-right: 12px;
-  outline: none;
+  border-radius: 2px;
   border: 2px solid transparent;
   color: $light;
-  padding-bottom: 4px;
   cursor: pointer;
-  background-color: $grey;
-  border-radius: 2px;
+  font-size: 32px;
+  outline: none;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
   transition: all 0.15s;
 }
 
 .textbox {
   font-size: 32px;
-  padding: 2px;
-  width: 64px;
-  text-align: center;
   margin-right: 4px;
+  padding: 2px;
+  text-align: center;
+  width: 64px;
 }
 
 .button:hover,

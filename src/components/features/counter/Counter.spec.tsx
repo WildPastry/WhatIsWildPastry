@@ -1,11 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import Counter from './Counter';
 import { Provider } from 'react-redux';
-import { makeStore } from '../../../store';
+import { makeStore } from '../../../redux/store';
 import user from '@testing-library/user-event';
 
 jest.mock('./counterAPI', () => ({
-  fetchCount: (amount: number) => new Promise<{ data: number }>((resolve) => setTimeout(() => resolve({ data: amount }), 500))
+  fetchCount: (amount: number) =>
+    new Promise<{ data: number }>((resolve) =>
+      setTimeout(() => resolve({ data: amount }), 500)
+    )
 }));
 
 describe('<Counter />', () => {
@@ -30,7 +33,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.click(screen.getByRole('button', { name: /decrement value/u }));
+    user.click(screen.getByRole('button', { name: /Decrement value/u }));
 
     expect(screen.getByText('-1')).toBeInTheDocument();
   });
@@ -44,7 +47,7 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.click(screen.getByRole('button', { name: /uncrement value/u }));
+    user.click(screen.getByRole('button', { name: /Increment value/u }));
 
     expect(screen.getByText('1')).toBeInTheDocument();
   });
@@ -58,8 +61,8 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.type(screen.getByLabelText(/set increment amount/u), '{backspace}5');
-    user.click(screen.getByRole('button', { name: /add amount/u }));
+    user.type(screen.getByLabelText(/Set increment amount/u), '{backspace}5');
+    user.click(screen.getByRole('button', { name: /Add amount/u }));
 
     expect(screen.getByText('5')).toBeInTheDocument();
   });
@@ -73,8 +76,8 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.type(screen.getByLabelText(/set increment amount/u), '{backspace}3');
-    user.click(screen.getByRole('button', { name: /add async/u }));
+    user.type(screen.getByLabelText(/Set increment amount/u), '{backspace}3');
+    user.click(screen.getByRole('button', { name: /Add async/u }));
 
     await expect(screen.findByText('3')).resolves.toBeInTheDocument();
   });
@@ -88,13 +91,13 @@ describe('<Counter />', () => {
       </Provider>
     );
 
-    user.click(screen.getByRole('button', { name: /add if odd/u }));
+    user.click(screen.getByRole('button', { name: /Add if odd/u }));
 
     expect(screen.getByText('0')).toBeInTheDocument();
 
-    user.click(screen.getByRole('button', { name: /uncrement value/u }));
-    user.type(screen.getByLabelText(/set increment amount/u), '{backspace}8');
-    user.click(screen.getByRole('button', { name: /add if odd/u }));
+    user.click(screen.getByRole('button', { name: /Increment value/u }));
+    user.type(screen.getByLabelText(/Set increment amount/u), '{backspace}8');
+    user.click(screen.getByRole('button', { name: /Add if odd/u }));
 
     await expect(screen.findByText('9')).resolves.toBeInTheDocument();
   });

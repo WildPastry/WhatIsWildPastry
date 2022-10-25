@@ -1,14 +1,8 @@
-import { render, screen } from '@testing-library/react';
 import Footer from './Footer';
+import { render } from '@testing-library/react';
 
 describe('<Footer />', () => {
   it('renders the component', () => {
-
-    render(
-      <Footer />
-    );
-
-    expect(screen.getByText('Footer')).toBeInTheDocument();
+    render(<Footer />);
   });
-
 });

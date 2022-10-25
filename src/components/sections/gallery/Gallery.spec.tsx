@@ -1,14 +1,8 @@
-import { render, screen } from '@testing-library/react';
 import Gallery from './Gallery';
+import { render } from '@testing-library/react';
 
 describe('<Gallery />', () => {
   it('renders the component', () => {
-
-    render(
-      <Gallery />
-    );
-
-    expect(screen.getByText('Gallery')).toBeInTheDocument();
+    render(<Gallery />);
   });
-
 });

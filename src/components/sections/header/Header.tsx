@@ -1,6 +1,10 @@
+import styles from './Header.module.scss';
+
 const Header: React.FC = (): JSX.Element => {
   return (
-    <header>Header</header>
+    <header aria-label='Header Section' className={styles.header}>
+      <h3>HEADER</h3>
+    </header>
   );
 };
 

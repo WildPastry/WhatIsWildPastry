@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import About from './sections/about/About';
 import { AppState } from '../redux/store';
 import Gallery from './sections/gallery/Gallery';
@@ -11,31 +11,39 @@ import { useSelector } from 'react-redux';
 
 const Main: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
+  const [loader, setLoader] = useState(true);
 
   // UseSelector for reading page loading state
-  const pageData = useSelector((state: AppState) => {
+  const pageData = useSelector((state: AppState): Loading => {
     return state.loading;
   });
 
   // Callback / dispatch and effect for setting page loading state
-  const pageLoading = useCallback((loading: boolean) => {
+  const pageLoading = useCallback((loading: boolean): void => {
     setTimeout(() => {
       dispatch(setLoading(loading));
     }, 1000);
   }, []);
 
-  useEffect(() => {
+  useEffect((): void => {
     pageLoading(false);
   }, [pageLoading]);
 
   // Spinner logic
-  const shouldShowLoading = pageData.isLoading
-    ? styles.showLoading : styles.hideLoading;
+  const transitionLoader = pageData.isLoading
+    ? styles.showLoading
+    : styles.hideLoading;
 
-  const renderMain = () => {
+  const renderPage = (): JSX.Element => {
     return (
       <main aria-label='Main Section'>
-        <div className={shouldShowLoading}><Loading /></div>
+        {loader ? (
+          <section
+            className={transitionLoader}
+            onTransitionEnd={() => setLoader(false)}>
+            <Loading />
+          </section>
+        ) : null}
         <Gallery />
         <Project />
         <About />
@@ -43,7 +51,7 @@ const Main: React.FC = (): JSX.Element => {
     );
   };
   // Error logic
-  return pageData.isError ? <div>Error</div> : renderMain();
+  return pageData.isError ? <div>Error</div> : renderPage();
 };
 
 // EXPORT Main

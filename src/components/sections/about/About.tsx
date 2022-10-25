@@ -1,6 +1,11 @@
+import Hover from './../../features/hover/Hover';
+
 const About: React.FC = (): JSX.Element => {
   return (
-    <section>About</section>
+    <section aria-label='About Section'>
+      <h3>ABOUT</h3>
+      <Hover />
+    </section>
   );
 };
 

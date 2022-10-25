@@ -1,8 +1,8 @@
-import Loading from './Loading';
+import Hover from './Hover';
 import { render } from '@testing-library/react';
 
-describe('<Loading />', () => {
+describe('<Hover />', () => {
   it('renders the component', () => {
-    render(<Loading />);
+    render(<Hover />);
   });
 });

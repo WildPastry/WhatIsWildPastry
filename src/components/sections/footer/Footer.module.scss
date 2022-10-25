@@ -1,8 +1,5 @@
-@import '../../../styles/styles.module.scss';
+@import '../../../styles/variables/colour.module';
 
 .footer {
   background: $dark;
-  margin: 15px 0;
-  padding: 0 15px;
-  width: 100%;
 }
