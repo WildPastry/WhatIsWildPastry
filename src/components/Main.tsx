@@ -36,7 +36,7 @@ const Main: React.FC = (): JSX.Element => {
 
   const renderPage = (): JSX.Element => {
     return (
-      <main aria-label='Main Section'>
+      <main aria-label='Main Section' className='container-fluid'>
         {loader ? (
           <section
             className={transitionLoader}
