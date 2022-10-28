@@ -19,8 +19,8 @@ const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
     clientY: number;
   }): void => {
     setCoords({
-      x: event.clientX - 100,
-      y: event.clientY - 100
+      x: event.clientX - props.width / 2,
+      y: event.clientY - props.height / 2
     });
   };
 
@@ -34,18 +34,21 @@ const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
         HOVER
       </h3>
       {hover ? (
-        <Image
-          src={props.src}
-          alt={props.alt}
-          height={props.height}
-          width={props.width}
-          style={{
-            left: coords.x,
-            top: coords.y
-          }}
-          className={styles.hover__image}
-        />
-      ) : null}
+        <div
+          style={{ left: coords.x, top: coords.y }}
+          className={styles.pointed}></div>
+      ) : // <Image
+      //   src={props.src}
+      //   alt={props.alt}
+      //   height={props.height}
+      //   width={props.width}
+      //   style={{
+      //     left: coords.x,
+      //     top: coords.y
+      //   }}
+      //   className={styles.hover__image}
+      // />
+      null}
     </section>
   );
 };
