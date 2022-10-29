@@ -34,27 +34,30 @@ const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
         HOVER
       </h3>
       {hover ? (
-        <div className='is-blend cursor cursor__default'>
-          <div className='cursor__ico'>
-            {/* <svg className='icon-cursor svg-icon'>
-              <use xlink:href='#icon-cursor'></use>
-            </svg> */}
-          </div>
-          <div className='cursor__point'></div>
-        </div>
+        // <div
+        //   className={`${styles['is-blend']} ${styles.cursor} ${styles.cursor__default}`}
+        //   style={{ left: coords.x, top: coords.y }}>
+        //   <div className={styles.cursor__ico}>
+            <svg
+            style={{ left: coords.x, top: coords.y }}
+              className={styles.pointed}
+              viewBox='0 0 28.143 28.143'>
+              <circle cx='14.071' cy='14.071' r='14.071' />
+            </svg>
+
       ) : // <div
-      //   style={{ left: coords.x, top: coords.y }}
-      //   className={styles.pointed}></div>
+      //   Style={{ left: coords.x, top: coords.y }}
+      //   ClassName={styles.pointed}></div>
       // <Image
-      //   src={props.src}
-      //   alt={props.alt}
-      //   height={props.height}
-      //   width={props.width}
-      //   style={{
-      //     left: coords.x,
-      //     top: coords.y
+      //   Src={props.src}
+      //   Alt={props.alt}
+      //   Height={props.height}
+      //   Width={props.width}
+      //   Style={{
+      //     Left: coords.x,
+      //     Top: coords.y
       //   }}
-      //   className={styles.hover__image}
+      //   ClassName={styles.hover__image}
       // />
       null}
     </section>

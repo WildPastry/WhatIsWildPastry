@@ -19,43 +19,46 @@
   cursor: none;
   width: 100px;
   height: 100px;
-  background: $dark;
+  // background: $dark;
   border-radius: 50%;
   position: absolute;
-  filter: invert(1);
+  // filter: invert(1);
   // mix-blend-mode: exclusion;
+  & svg {
+    fill: $yellow;
+  }
 }
 
 .cursor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  // pointer-events: none;
 }
 .cursor__default {
-  width: 28px;
-  height: 28px;
-  left: -14px;
-  top: -14px;
-  z-index: 11000;
+  // width: 28px;
+  // height: 28px;
+  // left: -14px;
+  // top: -14px;
+  // z-index: 11000;
 }
 .cursor__default.is-blend {
   mix-blend-mode: exclusion;
 }
 .cursor__ico {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 11001;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // z-index: 11001;
   position: absolute;
   color: #dfdfdf;
-  color: #fff;
+  // color: #fff;
 }
 .cursor__ico svg {
-  fill: #dfdfdf;
+  fill: red;
 }
 .cursor__photo {
   position: absolute;
