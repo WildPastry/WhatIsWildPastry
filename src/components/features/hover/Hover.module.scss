@@ -5,8 +5,7 @@
   justify-content: center;
   margin: 150px auto;
   &__title {
-    color: $yellow;
-    cursor: default;
+    cursor: none;
     text-align: center;
     padding: 20px;
   }
@@ -17,12 +16,61 @@
 }
 
 .pointed {
+  cursor: none;
   width: 100px;
   height: 100px;
-  background: #000;
-  // transform: scale(0);
+  background: $dark;
   border-radius: 50%;
-  pointer-events: none;
   position: absolute;
+  filter: invert(1);
   // mix-blend-mode: exclusion;
+}
+
+.cursor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor__default {
+  width: 28px;
+  height: 28px;
+  left: -14px;
+  top: -14px;
+  z-index: 11000;
+}
+.cursor__default.is-blend {
+  mix-blend-mode: exclusion;
+}
+.cursor__ico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11001;
+  position: absolute;
+  color: #dfdfdf;
+  color: #fff;
+}
+.cursor__ico svg {
+  fill: #dfdfdf;
+}
+.cursor__photo {
+  position: absolute;
+  z-index: 111002;
+}
+.cursor__photo img {
+  max-width: 100%;
+}
+.cursor__point {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #000;
+  transform: scale(0);
+}
+.is-blend .cursor__point {
+  background: #fff;
 }

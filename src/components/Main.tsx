@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import About from './sections/about/About';
+import About from '../pages/about/About';
 import { AppState } from '../redux/store';
-import Gallery from './sections/gallery/Gallery';
+import Gallery from '../pages/gallery/Gallery';
 import Loading from './features/loading/Loading';
-import Project from './sections/project/Project';
+import Project from '../pages/project/Project';
 import { setLoading } from '../redux/slices/loadingSlice';
 import styles from './Main.module.scss';
 import { useAppDispatch } from '../redux/hooks';

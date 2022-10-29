@@ -34,10 +34,18 @@ const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
         HOVER
       </h3>
       {hover ? (
-        <div
-          style={{ left: coords.x, top: coords.y }}
-          className={styles.pointed}></div>
-      ) : // <Image
+        <div className='is-blend cursor cursor__default'>
+          <div className='cursor__ico'>
+            {/* <svg className='icon-cursor svg-icon'>
+              <use xlink:href='#icon-cursor'></use>
+            </svg> */}
+          </div>
+          <div className='cursor__point'></div>
+        </div>
+      ) : // <div
+      //   style={{ left: coords.x, top: coords.y }}
+      //   className={styles.pointed}></div>
+      // <Image
       //   src={props.src}
       //   alt={props.alt}
       //   height={props.height}

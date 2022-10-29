@@ -1,4 +1,4 @@
-import Hover from './../../features/hover/Hover';
+import Hover from '../../components/features/hover/Hover';
 import styles from './About.module.scss';
 
 const About: React.FC = (): JSX.Element => {
