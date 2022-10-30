@@ -38,13 +38,12 @@ const Hover: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
         //   className={`${styles['is-blend']} ${styles.cursor} ${styles.cursor__default}`}
         //   style={{ left: coords.x, top: coords.y }}>
         //   <div className={styles.cursor__ico}>
-            <svg
-            style={{ left: coords.x, top: coords.y }}
-              className={styles.pointed}
-              viewBox='0 0 28.143 28.143'>
-              <circle cx='14.071' cy='14.071' r='14.071' />
-            </svg>
-
+        <svg
+          style={{ left: coords.x, top: coords.y }}
+          className={styles.pointed}
+          viewBox='0 0 28.143 28.143'>
+          <circle cx='14.071' cy='14.071' r='14.071' />
+        </svg>
       ) : // <div
       //   Style={{ left: coords.x, top: coords.y }}
       //   ClassName={styles.pointed}></div>
