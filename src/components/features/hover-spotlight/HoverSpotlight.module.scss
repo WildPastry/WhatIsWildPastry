@@ -1,0 +1,23 @@
+@import '../../../styles/variables/colour.module';
+
+.hover {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  &__title {
+    cursor: none;
+    text-align: center;
+    padding: 20px;
+  }
+  &__spotlight {
+    background: $light;
+    border-radius: 50%;
+    cursor: none;
+    height: 100px;
+    mix-blend-mode: difference;
+    // mix-blend-mode: exclusion;
+    pointer-events: none;
+    position: absolute;
+    width: 100px;
+  }
+}

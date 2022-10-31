@@ -14,3 +14,8 @@ interface HoverImage {
   width: number;
   height: number;
 }
+
+interface HoverSpotlight {
+  width: number;
+  height: number;
+}
