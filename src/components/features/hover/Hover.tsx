@@ -14,6 +14,13 @@ const Hover: React.FC<Hover> = (props: Hover): JSX.Element => {
     setHover(false);
   };
 
+  /**
+   * This function will attach coordinates which follow the cursor
+   * @param {object} event An object containing coordinates as numbers
+   * @param {number} event.clientX Horizontal movement
+   * @param {number} event.clientY Vertical movement
+   * @returns {void} No return type
+   */
   const handleMouseMove = (event: {
     clientX: number;
     clientY: number;
@@ -35,8 +42,8 @@ const Hover: React.FC<Hover> = (props: Hover): JSX.Element => {
       </h3>
       {hover ? (
         <Image
-          src={props.src}
           alt={props.alt}
+          src={props.src}
           width={props.width}
           height={props.height}
           style={{
