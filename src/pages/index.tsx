@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Main from './main/Main';
-import { NextPageWithLayout } from './page';
+import { NextPageWithLayout } from '../types/page';
 
 const Home: NextPageWithLayout = (): JSX.Element => {
   return (
@@ -10,12 +10,9 @@ const Home: NextPageWithLayout = (): JSX.Element => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <h1>INDEX</h1>
+      <Main />
     </>
   );
-};
-
-Home.getLayout = (page) => {
-  return <Main>{page}</Main>;
 };
 
 // EXPORT Home

@@ -5,8 +5,11 @@ import Loading from '../../components/features/loading/Loading';
 import { useAppDispatch } from '../../redux/hooks';
 import { setLoading } from '../../redux/slices/loadingSlice';
 import { AppState } from '../../redux/store';
+import Header from '../../components/layout/header/Header';
+import Footer from '../../components/layout/footer/Footer';
+import Nav from '../../components/layout/nav/Nav';
 
-const Main: React.FC<Main> = ({ children }): JSX.Element => {
+const Main: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const [loader, setLoader] = useState(true);
 
@@ -41,7 +44,9 @@ const Main: React.FC<Main> = ({ children }): JSX.Element => {
             <Loading />
           </section>
         ) : null}
-        {children}
+        <Header />
+        <Nav />
+        <Footer />
       </main>
     );
   };
