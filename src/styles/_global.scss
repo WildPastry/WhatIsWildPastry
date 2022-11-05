@@ -20,26 +20,26 @@ body {
 }
 
 body {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Selection
 ::selection {
-	color: $purple-150;
+  color: $purple-150;
 }
 
 ::-moz-selection {
-	color: $purple-150;
+  color: $purple-150;
 }
 
 // Scrollbar
 ::-webkit-scrollbar {
-	background: $purple;
+  background: $purple;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $purple-150;
+  background: $purple-150;
 }
 
 // Headings
@@ -67,6 +67,14 @@ h6 {
   font-size: 0.875rem;
 }
 
+// Links
+a,
+a:hover,
+a:visited {
+  color: $purple-150;
+}
+
+// Paragraph
 p {
   font-size: 1.125rem;
 }
