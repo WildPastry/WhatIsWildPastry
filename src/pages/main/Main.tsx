@@ -1,13 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
-import styles from './Main.module.scss';
-import { useSelector } from 'react-redux';
-import Loading from '../../components/features/loading/Loading';
-import { useAppDispatch } from '../../redux/hooks';
-import { setLoading } from '../../redux/slices/loadingSlice';
 import { AppState } from '../../redux/store';
-import Header from '../../components/layout/header/Header';
-import Footer from '../../components/layout/footer/Footer';
-import Nav from '../../components/layout/nav/Nav';
+import Loading from '../../components/features/loading/Loading';
+import { setLoading } from '../../redux/slices/loadingSlice';
+import styles from './Main.module.scss';
+import { useAppDispatch } from '../../redux/hooks';
+import { useSelector } from 'react-redux';
 
 const Main: React.FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
@@ -44,9 +41,6 @@ const Main: React.FC = (): JSX.Element => {
             <Loading />
           </section>
         ) : null}
-        <Header />
-        <Nav />
-        <Footer />
       </main>
     );
   };

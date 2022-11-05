@@ -8,7 +8,6 @@ interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;
 }
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
-
   return (
     <Provider store={store}>
       <Component {...pageProps} />
