@@ -1,23 +1,15 @@
+@import '../../../styles/mixins/animation';
 @import '../../../styles/variables/colour.module';
 
 .hover {
   cursor: none;
   &__spotlight {
-    animation: initiate .3s 1;
+    @include animate(scaleIn, .2s, linear, 1);
     background: $light;
     border-radius: 50%;
     cursor: none;
     mix-blend-mode: difference;
     pointer-events: none;
     position: absolute;
-  }
-}
-
-@keyframes initiate {
-  0% {
-    transform: scale(0)
-  }
-  100% {
-    transform: scale(1)
   }
 }
