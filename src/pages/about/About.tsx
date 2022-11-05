@@ -1,5 +1,5 @@
-import HoverImage from '../../features/hover-image/HoverImage';
-import HoverSpotlight from '../../features/hover-spotlight/HoverSpotlight';
+import HoverImage from '../../components/features/hover-image/HoverImage';
+import HoverSpotlight from '../../components/features/hover-spotlight/HoverSpotlight';
 
 const About: React.FC = (): JSX.Element => {
   return (
