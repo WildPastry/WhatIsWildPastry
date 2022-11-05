@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react';
-import Link from 'next/link';
 import styles from './Main.module.scss';
 import { useSelector } from 'react-redux';
 import Loading from '../../components/features/loading/Loading';
@@ -42,10 +41,6 @@ const Main: React.FC = (): JSX.Element => {
             <Loading />
           </section>
         ) : null}
-        {/* <Link href='/about/About'>About</Link> */}
-        {/* <Gallery />
-        <Project /> */}
-        {/* <About /> */}
       </main>
     );
   };
