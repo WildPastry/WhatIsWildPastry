@@ -6,7 +6,7 @@ import { useAppDispatch } from '../../redux/hooks';
 import { setLoading } from '../../redux/slices/loadingSlice';
 import { AppState } from '../../redux/store';
 
-const Main: React.FC = (): JSX.Element => {
+const Main: React.FC<Main> = ({ children }): JSX.Element => {
   const dispatch = useAppDispatch();
   const [loader, setLoader] = useState(true);
 
@@ -41,6 +41,7 @@ const Main: React.FC = (): JSX.Element => {
             <Loading />
           </section>
         ) : null}
+        {children}
       </main>
     );
   };

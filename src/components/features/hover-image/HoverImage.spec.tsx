@@ -5,10 +5,11 @@ describe('<Hover />', () => {
   it('renders the component', () => {
     render(
       <HoverImage
-        alt='static-image'
+        content={<span>HoverImage</span>}
         src='/img/pastry.jpg'
-        height={200}
+        alt='static-image'
         width={200}
+        height={200}
       />
     );
   });
