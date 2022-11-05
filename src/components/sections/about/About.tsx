@@ -5,12 +5,17 @@ const About: React.FC = (): JSX.Element => {
   return (
     <section aria-label='About Section'>
       <h3>ABOUT</h3>
-      <HoverSpotlight height={100} width={100} />
+      <HoverSpotlight
+        content={<span>HoverSpotlight</span>}
+        width={100}
+        height={100}
+      />
       <HoverImage
-        alt='static-image'
+        content={<span>HoverImage</span>}
         src='/img/pastry.jpg'
-        height={200}
+        alt='static-image'
         width={200}
+        height={200}
       />
     </section>
   );

@@ -9,6 +9,7 @@ interface Loading {
 }
 
 interface HoverImage {
+  content: JSX.Element;
   src: string;
   alt: string;
   width: number;
@@ -16,6 +17,7 @@ interface HoverImage {
 }
 
 interface HoverSpotlight {
+  content: JSX.Element;
   width: number;
   height: number;
 }

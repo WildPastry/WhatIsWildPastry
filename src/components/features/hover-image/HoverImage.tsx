@@ -15,11 +15,13 @@ const HoverImage: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
   };
 
   /**
-   * This function will attach coordinates which follow the cursor
+   * This function will attach coordinates to any element passed into this component.
+   * The element will follow the cursor while hovering over this component and
+   * will detach once the cursor moves away from this component.
    * @param {object} event An object containing coordinates as numbers
    * @param {number} event.clientX Horizontal movement
    * @param {number} event.clientY Vertical movement
-   * @returns {void} No return type
+   * @returns {void} No return
    */
   const handleMouseMove = (event: {
     clientX: number;
@@ -32,16 +34,17 @@ const HoverImage: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
   };
 
   return (
-    <section aria-label='Hover Section' className={styles.hover}>
-      <h3
+    <section aria-label='Hover Section'>
+      <span
+        className={styles.hover}
         onMouseMove={handleMouseMove}
         onMouseEnter={showHover}
-        onMouseLeave={hideHover}
-        className={styles.hover__title}>
-        HOVER IMAGE
-      </h3>
+        onMouseLeave={hideHover}>
+        {props.content}
+      </span>
       {hover ? (
         <Image
+          className={styles.hover__image}
           src={props.src}
           alt={props.alt}
           width={props.width}
@@ -50,7 +53,6 @@ const HoverImage: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
             left: coords.x,
             top: coords.y
           }}
-          className={styles.hover__image}
         />
       ) : null}
     </section>

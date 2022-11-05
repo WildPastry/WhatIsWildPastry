@@ -1,16 +1,19 @@
 @import '../../../styles/variables/colour.module';
 
 .hover {
-  display: flex;
-  justify-content: center;
-  margin: 100px auto;
-  &__title {
-    cursor: none;
-    text-align: center;
-    padding: 20px;
-  }
+  cursor: none;
   &__image {
+    animation: initiate .3s 1;
     pointer-events: none;
     position: absolute;
+  }
+}
+
+@keyframes initiate {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1)
   }
 }

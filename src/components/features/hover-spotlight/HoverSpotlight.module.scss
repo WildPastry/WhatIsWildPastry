@@ -1,23 +1,23 @@
 @import '../../../styles/variables/colour.module';
 
 .hover {
-  display: flex;
-  justify-content: center;
-  margin: 100px auto;
-  &__title {
-    cursor: none;
-    text-align: center;
-    padding: 20px;
-  }
+  cursor: none;
   &__spotlight {
+    animation: initiate .3s 1;
     background: $light;
     border-radius: 50%;
     cursor: none;
-    height: 100px;
     mix-blend-mode: difference;
-    // mix-blend-mode: exclusion;
     pointer-events: none;
     position: absolute;
-    width: 100px;
+  }
+}
+
+@keyframes initiate {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1)
   }
 }

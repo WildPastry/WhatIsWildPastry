@@ -16,11 +16,13 @@ const HoverSpotlight: React.FC<HoverSpotlight> = (
   };
 
   /**
-   * This function will attach coordinates which follow the cursor
+   * This function will attach coordinates to any element passed into this component.
+   * The element will follow the cursor while hovering over this component and
+   * will detach once the cursor moves away from this component.
    * @param {object} event An object containing coordinates as numbers
    * @param {number} event.clientX Horizontal movement
    * @param {number} event.clientY Vertical movement
-   * @returns {void} No return type
+   * @returns {void} No return
    */
   const handleMouseMove = (event: {
     clientX: number;
@@ -33,18 +35,23 @@ const HoverSpotlight: React.FC<HoverSpotlight> = (
   };
 
   return (
-    <section aria-label='Hover Section' className={styles.hover}>
-      <h3
-        onMouseMove={handleMouseMove}
+    <section aria-label='Hover Spotlight Section'>
+      <span
+        className={styles.hover}
         onMouseEnter={showHover}
         onMouseLeave={hideHover}
-        className={styles.hover__title}>
-        HOVER SPOTLIGHT
-      </h3>
+        onMouseMove={handleMouseMove}>
+        {props.content}
+      </span>
       {hover ? (
-        <div
-          style={{ left: coords.x, top: coords.y }}
+        <span
           className={styles.hover__spotlight}
+          style={{
+            left: coords.x,
+            top: coords.y,
+            width: props.width,
+            height: props.height
+          }}
         />
       ) : null}
     </section>
