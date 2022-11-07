@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Main from './main/Main';
+import Main from '../components/layout/main/Main';
 import { NextPageWithLayout } from '../types/page';
 
 const Home: NextPageWithLayout = (): JSX.Element => {

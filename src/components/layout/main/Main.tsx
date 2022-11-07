@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { AppState } from '../../redux/store';
-import Loading from '../../components/features/loading/Loading';
-import { setLoading } from '../../redux/slices/loadingSlice';
-import styles from './Main.module.scss';
-import { useAppDispatch } from '../../redux/hooks';
+import { AppState } from '../../../redux/store';
+import Loading from '../../features/loading/Loading';
+import { setLoading } from '../../../redux/slices/loadingSlice';
+import styles from 'Main.module.scss';
+import { useAppDispatch } from '../../../redux/hooks';
 import { useSelector } from 'react-redux';
 
 const Main: React.FC = (): JSX.Element => {

@@ -1,6 +1,6 @@
 import Main from './Main';
 import { Provider } from 'react-redux';
-import { makeStore } from '../redux/store';
+import { makeStore } from '../../../redux/store';
 import { render } from '@testing-library/react';
 
 describe('<Main />', () => {
