@@ -1,0 +1,10 @@
+@import '../../../styles/mixins/animation';
+
+.hover {
+  cursor: none;
+  &__image {
+    @include animate(fadeIn, .2s, linear, 1);
+    pointer-events: none;
+    position: absolute;
+  }
+}
