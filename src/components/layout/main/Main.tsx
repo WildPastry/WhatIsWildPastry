@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
+import About from '../../../pages/about/About';
 import { AppState } from '../../../redux/store';
+import Gallery from '../../../pages/gallery/Gallery';
 import Loading from '../../features/loading/Loading';
+import Project from '../../../pages/project/Project';
 import { setLoading } from '../../../redux/slices/loadingSlice';
-import styles from 'Main.module.scss';
+import styles from './Main.module.scss';
 import { useAppDispatch } from '../../../redux/hooks';
 import { useSelector } from 'react-redux';
 
@@ -41,6 +44,9 @@ const Main: React.FC = (): JSX.Element => {
             <Loading />
           </section>
         ) : null}
+        <About />
+        <Gallery />
+        <Project />
       </main>
     );
   };

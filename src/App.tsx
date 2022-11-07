@@ -6,12 +6,12 @@ import Nav from './components/layout/nav/Nav';
 
 const App = (): JSX.Element => {
   return (
-    <div>
+    <main>
       <Header />
       <Nav />
       <Main />
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -1,4 +1,3 @@
-import Image from 'next/future/image';
 import styles from './HoverImage.module.scss';
 import { useState } from 'react';
 
@@ -43,7 +42,7 @@ const HoverImage: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
         {props.content}
       </span>
       {hover ? (
-        <Image
+        <img
           className={styles.hover__image}
           src={props.src}
           alt={props.alt}
