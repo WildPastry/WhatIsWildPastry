@@ -3,11 +3,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import About from './pages/about/About';
 import { AppState } from './redux/store';
+import Error from './components/layout/error/Error';
 import Footer from './components/layout/footer/Footer';
 import Gallery from './pages/gallery/Gallery';
 import Header from './components/layout/header/Header';
 import Loading from './components/features/loading/Loading';
+import Main from './components/layout/main/Main';
 import Nav from './components/layout/nav/Nav';
+import NoPage from './pages/nopage/NoPage';
 import Project from './pages/project/Project';
 import { setLoading } from './redux/slices/loadingSlice';
 import styles from './App.module.scss';
@@ -41,7 +44,7 @@ const App = (): JSX.Element => {
 
   const renderPage = (): JSX.Element => {
     return (
-      <main aria-label='Main Section'>
+      <main aria-label='App Section'>
         {loader ? (
           <section
             className={transitionLoader}
@@ -52,22 +55,23 @@ const App = (): JSX.Element => {
         <section>
           <Header />
           <BrowserRouter>
+            <Nav />
             <Routes>
-              <Route path='/' element={<Nav />}>
-                <Route index path='/pages/gallery/' element={<Gallery />} />
-                <Route path='/pages/project/' element={<Project />} />
-                <Route path='/pages/about/' element={<About />} />
-                {/* <Route path='*' element={<NoPage />} /> */}
-              </Route>
+              <Route index path='/' element={<h1>HOME</h1>} />
+              <Route path='/pages/gallery' element={<Gallery />} />
+              <Route path='/pages/project' element={<Project />} />
+              <Route path='/pages/about' element={<About />} />
+              <Route path='*' element={<NoPage />} />
             </Routes>
           </BrowserRouter>
+          <Main />
           <Footer />
         </section>
       </main>
     );
   };
   // Error logic
-  return pageData.isError ? <div>Error</div> : renderPage();
+  return pageData.isError ? <Error /> : renderPage();
 };
 
 // EXPORT App

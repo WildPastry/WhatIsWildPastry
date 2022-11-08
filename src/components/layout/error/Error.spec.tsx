@@ -1,8 +1,8 @@
-import Main from './Main';
+import Error from './Error';
 import { render } from '@testing-library/react';
 
-describe('<Main />', () => {
+describe('<Error />', () => {
   it('renders the component', () => {
-    render(<Main />);
+    render(<Error />);
   });
 });

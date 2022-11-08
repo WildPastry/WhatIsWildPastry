@@ -1,8 +1,8 @@
-import Main from './Main';
+import NoPage from './NoPage';
 import { render } from '@testing-library/react';
 
-describe('<Main />', () => {
+describe('<NoPage />', () => {
   it('renders the component', () => {
-    render(<Main />);
+    render(<NoPage />);
   });
 });
