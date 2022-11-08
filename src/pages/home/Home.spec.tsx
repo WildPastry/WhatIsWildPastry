@@ -1,8 +1,8 @@
-import Gallery from './Gallery';
+import Home from './Home';
 import { render } from '@testing-library/react';
 
-describe('<Gallery />', () => {
+describe('<Home />', () => {
   it('renders the component', () => {
-    render(<Gallery />);
+    render(<Home />);
   });
 });

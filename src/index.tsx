@@ -1,3 +1,4 @@
+import './styles/main.scss';
 import App from './App';
 import { Provider } from 'react-redux';
 import React from 'react';

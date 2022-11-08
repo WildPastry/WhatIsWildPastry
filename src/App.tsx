@@ -1,12 +1,11 @@
-import './styles/main.scss';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import About from './pages/about/About';
 import { AppState } from './redux/store';
 import Error from './components/layout/error/Error';
 import Footer from './components/layout/footer/Footer';
-import Gallery from './pages/gallery/Gallery';
 import Header from './components/layout/header/Header';
+import Home from './pages/home/Home';
 import Loading from './components/features/loading/Loading';
 import Nav from './components/layout/nav/Nav';
 import NoPage from './pages/nopage/NoPage';
@@ -51,12 +50,12 @@ const App = (): JSX.Element => {
             <Loading />
           </section>
         ) : null}
-        <section>
+        <>
           <Header />
           <BrowserRouter>
             <Nav />
             <Routes>
-              <Route index path='/' element={<Gallery />} />
+              <Route index path='/' element={<Home />} />
               <Route path='/pages/project' element={<Project />} />
               <Route path='/pages/about' element={<About />} />
               <Route path='*' element={<NoPage />} />
@@ -64,7 +63,7 @@ const App = (): JSX.Element => {
           </BrowserRouter>
           <Outlet />
           <Footer />
-        </section>
+        </>
       </main>
     );
   };
