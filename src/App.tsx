@@ -1,5 +1,5 @@
 import './styles/main.scss';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import About from './pages/about/About';
 import { AppState } from './redux/store';
@@ -8,7 +8,6 @@ import Footer from './components/layout/footer/Footer';
 import Gallery from './pages/gallery/Gallery';
 import Header from './components/layout/header/Header';
 import Loading from './components/features/loading/Loading';
-import Main from './components/layout/main/Main';
 import Nav from './components/layout/nav/Nav';
 import NoPage from './pages/nopage/NoPage';
 import Project from './pages/project/Project';
@@ -57,14 +56,13 @@ const App = (): JSX.Element => {
           <BrowserRouter>
             <Nav />
             <Routes>
-              <Route index path='/' element={<h1>HOME</h1>} />
-              <Route path='/pages/gallery' element={<Gallery />} />
+              <Route index path='/' element={<Gallery />} />
               <Route path='/pages/project' element={<Project />} />
               <Route path='/pages/about' element={<About />} />
               <Route path='*' element={<NoPage />} />
             </Routes>
           </BrowserRouter>
-          <Main />
+          <Outlet />
           <Footer />
         </section>
       </main>
