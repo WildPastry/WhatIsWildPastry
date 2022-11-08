@@ -79,7 +79,7 @@ p {
   font-size: 1.125rem;
 }
 
-// Styles
+// Font styles
 .font {
   &--normal {
     font-style: $font-normal;
@@ -89,7 +89,7 @@ p {
   }
 }
 
-// Weights
+// Font weights
 .font {
   &--thin {
     font-weight: $font-thin;
@@ -102,5 +102,21 @@ p {
   }
   &--heavy {
     font-weight: $font-heavy;
+  }
+}
+
+// Icon sizes
+.icon {
+  &--small {
+    height: 15px;
+    width: 15px;
+  }
+  &--regular {
+    height: 30px;
+    width: 30px;
+  }
+  &--large {
+    height: 100px;
+    width: 100px;
   }
 }
