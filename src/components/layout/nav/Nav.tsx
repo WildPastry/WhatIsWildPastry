@@ -13,13 +13,13 @@ const Nav: React.FC = (): JSX.Element => {
       </div>
       <nav aria-label='Navigation Links'>
         <Link to='/'>
-          <a className={styles.nav__link}>HOME</a>
+          <span className={styles.nav__link}>HOME</span>
         </Link>
         <Link to='/pages/project'>
-          <a className={styles.nav__link}>RANDOM</a>
+          <span className={styles.nav__link}>RANDOM</span>
         </Link>
         <Link to='/pages/about'>
-          <a className={styles.nav__link}>ABOUT</a>
+          <span className={styles.nav__link}>ABOUT</span>
         </Link>
       </nav>
     </section>
