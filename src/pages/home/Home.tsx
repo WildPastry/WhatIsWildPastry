@@ -3,7 +3,7 @@ const Home: React.FC = (): JSX.Element => {
     <section aria-label='Home Section' className='container-fluid'>
       <div className='row'>
         <div className='col'>
-          <h1 className='font--thin'>GALLERY HERE</h1>
+          <h2 className='font--thin'>GALLERY</h2>
         </div>
       </div>
     </section>

@@ -2,7 +2,9 @@ import styles from './Header.module.scss';
 
 const Header: React.FC = (): JSX.Element => {
   return (
-    <header aria-label='Header Section' className={styles.header}>
+    <header
+      aria-label='Header Section'
+      className={`${styles.header} container-fluid`}>
       <h3>HEADER</h3>
     </header>
   );
