@@ -1,12 +1,11 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const Nav: React.FC = (): JSX.Element => {
   return (
-    <section aria-label='Navigation Section' className='container-fluid'>
-      <Link href='/'>Home</Link>
-      <Link href='/about/About'>About</Link>
-      <Link href='/gallery/Gallery'>Gallery</Link>
-      <Link href='/project/Project'>Project</Link>
+    <section aria-label='Navigation Section'>
+      <Link to='/'>Home</Link>
+      <Link to='/pages/project'>Project</Link>
+      <Link to='/pages/about'>About</Link>
     </section>
   );
 };

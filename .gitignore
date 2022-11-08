@@ -1,41 +1,31 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.htaccess
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# development
-/dev
-/utilities
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+*.log
+lerna-debug.log*
+logs
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# local env files
-.env*.local
+# Dependencies
+.pnp.js
+*.local
+dist
+dist-ssr
+node_modules
 
-# vercel
-.vercel
+# Editor directories and files
+!.vscode/extensions.json
+.DS_Store
+.htaccess
+.idea
+.vscode/*
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+*.sw?
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Development
+/dev
+/utilities

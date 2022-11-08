@@ -3,7 +3,7 @@ import HoverSpotlight from '../../components/features/hover-spotlight/HoverSpotl
 
 const About: React.FC = (): JSX.Element => {
   return (
-    <section aria-label='About Section'>
+    <section aria-label='About Section' className='container-fluid'>
       <h3>ABOUT</h3>
       <HoverSpotlight
         content={<span>HoverSpotlight</span>}
