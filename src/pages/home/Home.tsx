@@ -29,16 +29,16 @@ const Home: React.FC = (): JSX.Element => {
   }, [pageLoading]);
 
   // Spinner logic
-  const transitionLoader = pageData.isLoading
-    ? styles.showLoading
-    : styles.hideLoading;
+  const shouldShowLoading = pageData.isLoading
+    ? styles['loading--active']
+    : styles['loading--inactive'];
 
   const renderPage = (): JSX.Element => {
     return (
-      <main aria-label='Home Section' className='container-fluid'>
+      <main aria-label='Home Section' className={'container-fluid'}>
         {loader ? (
           <section
-            className={transitionLoader}
+            className={`${styles.loading} ${shouldShowLoading}`}
             onTransitionEnd={() => setLoader(false)}>
             <Loading />
           </section>

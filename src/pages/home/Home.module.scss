@@ -1,8 +1,9 @@
-.showLoading {
-  opacity: 1;
-}
-
-.hideLoading {
-  opacity: 0;
-  transition: opacity 0.5s;
+.loading {
+  &--active {
+    opacity: 1;
+  }
+  &--inactive {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
 }
