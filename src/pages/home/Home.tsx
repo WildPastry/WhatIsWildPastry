@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { AppState } from '../../redux/store';
 import Error from '../../components/layout/error/Error';
 import Filter from '../../components/features/filter/Filter';
+import Gallery from '../../components/layout/gallery/Gallery';
 import Loading from '../../components/features/loading/Loading';
 import { setLoading } from '../../redux/slices/loadingSlice';
 import styles from './Home.module.scss';
@@ -45,7 +46,7 @@ const Home: React.FC = (): JSX.Element => {
         ) : null}
         <>
           <Filter />
-          <h2 className='font--thin'>GALLERY</h2>
+          <Gallery />
         </>
       </main>
     );
