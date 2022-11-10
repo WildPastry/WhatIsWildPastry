@@ -1,3 +1,4 @@
+import Theme from '../../features/theme/Theme';
 import styles from './Header.module.scss';
 
 const Header: React.FC = (): JSX.Element => {
@@ -6,6 +7,7 @@ const Header: React.FC = (): JSX.Element => {
       aria-label='Header Section'
       className={`${styles.header} container-fluid`}>
       <h3>HEADER</h3>
+      <Theme />
     </header>
   );
 };

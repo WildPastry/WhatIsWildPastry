@@ -4,7 +4,9 @@ const Gallery: React.FC = (): JSX.Element => {
   return (
     <section aria-label='Gallery Section'>
       <div className={styles['masonry-with-columns']}>
-        <div />
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
       </div>
     </section>
   );
