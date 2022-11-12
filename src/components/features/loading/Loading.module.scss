@@ -10,7 +10,7 @@
   overflow: hidden;
   position: fixed;
   right: 0;
-  top: 80px;
+  top: 0;
   z-index: 1;
   &__inner {
     bottom: 0;
@@ -51,7 +51,7 @@
   &:nth-child(1) {
     animation-delay: -50ms;
     & .loader__line {
-      border-color: $peach;
+      border-color: $purple;
       height: 90px;
       top: 7px;
       width: 90px;
