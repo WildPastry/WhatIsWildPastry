@@ -14,11 +14,11 @@ const App = (): JSX.Element => {
   const [showMeme, setShowMeme] = useState(false);
 
   const handleOnIdle = () => {
-    document.hidden ? setShowMeme(true) : setShowMeme(false);
+    document.hidden ? setShowMeme(true) : null;
   };
 
   useIdleTimer({
-    timeout: 2000,
+    timeout: 20000,
     onIdle: handleOnIdle,
     debounce: 100
   });
@@ -29,7 +29,7 @@ const App = (): JSX.Element => {
 
   return (
     <main aria-label='App Section'>
-      {showMeme ? renderMeme() : null}
+      {/* {showMeme ? renderMeme() : null} */}
       <Header />
       <BrowserRouter>
         <Nav />
