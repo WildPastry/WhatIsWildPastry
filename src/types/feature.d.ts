@@ -3,7 +3,7 @@ interface Loading {
   isError: boolean;
 }
 
-interface HoverImage {
+interface IHoverImage {
   content: JSX.Element;
   src: string;
   alt: string;
@@ -11,7 +11,7 @@ interface HoverImage {
   height: number;
 }
 
-interface HoverSpotlight {
+interface IHoverSpotlight {
   content: JSX.Element;
   width: number;
   height: number;

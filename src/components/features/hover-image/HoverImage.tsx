@@ -1,7 +1,7 @@
 import styles from './HoverImage.module.scss';
 import { useState } from 'react';
 
-const HoverImage: React.FC<HoverImage> = (props: HoverImage): JSX.Element => {
+const HoverImage: React.FC<IHoverImage> = (props: IHoverImage): JSX.Element => {
   const [hover, setHover] = useState(false);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 

@@ -37,7 +37,11 @@ const Home: React.FC = (): JSX.Element => {
   const renderPage = (): JSX.Element => {
     return (
       <main aria-label='Home Section' className={'container-fluid'}>
-        {loader ? (
+        <>
+          <Filter />
+          <Gallery />
+        </>
+        {/* {loader ? (
           <section
             className={`${styles.loading} ${shouldShowLoading}`}
             onTransitionEnd={() => setLoader(false)}>
@@ -47,7 +51,7 @@ const Home: React.FC = (): JSX.Element => {
         <>
           <Filter />
           <Gallery />
-        </>
+        </> */}
       </main>
     );
   };

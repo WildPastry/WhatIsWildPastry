@@ -1,7 +1,7 @@
 const Filter: React.FC = (): JSX.Element => {
   return (
     <section aria-label='Filter Section'>
-      <h5>FILTER SYSTEM</h5>
+      <p>FILTER SYSTEM</p>
     </section>
   );
 };

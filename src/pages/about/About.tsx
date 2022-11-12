@@ -6,12 +6,12 @@ const About: React.FC = (): JSX.Element => {
     <section aria-label='About Section' className='container-fluid'>
       <h2 className='font--thin'>ABOUT</h2>
       <HoverSpotlight
-        content={<span>HoverSpotlight</span>}
+        content={<p>HoverSpotlight</p>}
         width={100}
         height={100}
       />
       <HoverImage
-        content={<span>HoverImage</span>}
+        content={<p>HoverImage</p>}
         src='/img/pastry.jpg'
         alt='static-image'
         width={200}

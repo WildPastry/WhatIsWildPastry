@@ -1,7 +1,7 @@
 const Theme: React.FC = (): JSX.Element => {
   return (
     <section aria-label='Theme Section'>
-      <h4>THEME</h4>
+      <p>THEME</p>
     </section>
   );
 };

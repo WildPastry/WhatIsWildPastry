@@ -1,8 +1,8 @@
 import styles from './HoverSpotlight.module.scss';
 import { useState } from 'react';
 
-const HoverSpotlight: React.FC<HoverSpotlight> = (
-  props: HoverSpotlight
+const HoverSpotlight: React.FC<IHoverSpotlight> = (
+  props: IHoverSpotlight
 ): JSX.Element => {
   const [hover, setHover] = useState(false);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
