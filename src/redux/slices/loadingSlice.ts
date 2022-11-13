@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 // Set initialState
-const initialState = {
+const initialState: ILoading = {
   isLoading: true,
   isError: false
 };

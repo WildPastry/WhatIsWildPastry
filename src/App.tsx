@@ -4,29 +4,43 @@ import { ETimerCounts } from './models/enums';
 import Footer from './components/layout/footer/Footer';
 import Header from './components/layout/header/Header';
 import Home from './pages/home/Home';
-import Main from './components/layout/main/Main';
 import Meme from './components/features/meme/Meme';
 import Nav from './components/layout/nav/Nav';
 import NoPage from './pages/nopage/NoPage';
 import Project from './pages/project/Project';
+import { RootState } from './redux/reducers/rootReducer';
+import { setScrolling } from './redux/slices/scrollingSlice';
 import styles from './App.module.scss';
+import { useAppDispatch } from './redux/hooks';
 import { useIdleTimer } from 'react-idle-timer';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
 const App = (): JSX.Element => {
+  const dispatch = useAppDispatch();
   const [showMeme, setShowMeme] = useState(false);
 
+  // UseSelector for page scrolling
+  const shouldShowScrolling = useSelector((state: RootState) => {
+    return state.scrolling.isScrolling;
+  });
+
+  const root = document.getElementById('root') as HTMLElement;
+  root.className = `scroll--${String(shouldShowScrolling)}`;
+
   const handleOnIdle = () => {
-    document.hidden ? setShowMeme(true) : null;
+    document.hidden ? (dispatch(setScrolling(true)), setShowMeme(true)) : null;
   };
 
   const handleOnAction = () => {
     setTimeout(() => {
+      dispatch(setScrolling(false));
       setShowMeme(false);
     }, ETimerCounts.timerShort);
   };
 
   const handleClick = () => {
+    dispatch(setScrolling(false));
     setShowMeme(false);
   };
 

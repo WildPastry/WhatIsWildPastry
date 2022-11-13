@@ -1,6 +1,10 @@
-interface Loading {
+interface ILoading {
   isLoading: boolean;
   isError: boolean;
+}
+
+interface IScrolling {
+  isScrolling: boolean;
 }
 
 interface IHoverImage {

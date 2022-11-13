@@ -43,6 +43,14 @@ body {
   background: $purple-150;
 }
 
+.scroll--false {
+  overflow: hidden;
+}
+
+.scroll--true {
+  overflow: auto;
+}
+
 // Headings
 h1 {
   font-size: 2.5rem;

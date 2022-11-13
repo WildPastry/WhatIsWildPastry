@@ -1,4 +1,4 @@
 export enum ETimerCounts {
-  timerShort = 3000,
-  timerLong = 90000
+  timerShort = 300000,
+  timerLong = 3000
 };
