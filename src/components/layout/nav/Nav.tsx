@@ -16,7 +16,7 @@ const Nav: React.FC = (): JSX.Element => {
           <span className={styles.nav__link}>HOME</span>
         </Link>
         <Link to='/pages/project'>
-          <span className={styles.nav__link}>RANDOM</span>
+          <span className={styles.nav__link}>PROJECT</span>
         </Link>
         <Link to='/pages/about'>
           <span className={styles.nav__link}>ABOUT</span>

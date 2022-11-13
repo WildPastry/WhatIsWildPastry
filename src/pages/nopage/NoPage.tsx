@@ -1,6 +1,6 @@
 const NoPage: React.FC = (): JSX.Element => {
   return (
-    <section aria-label='NoPage Section' className='container-fluid'>
+    <section aria-label='NoPage Section'>
       <h3>NoPage</h3>
     </section>
   );

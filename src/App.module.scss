@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  &__outlet {
+    flex: 1;
+  }
+}

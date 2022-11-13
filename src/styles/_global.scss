@@ -19,9 +19,10 @@ body {
   width: 100%;
 }
 
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+// Root
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 // Selection

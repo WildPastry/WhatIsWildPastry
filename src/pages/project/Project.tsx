@@ -1,6 +1,8 @@
+import styles from './Project.module.scss';
+
 const Project: React.FC = (): JSX.Element => {
   return (
-    <section aria-label='Project Section' className='container-fluid'>
+    <section aria-label='Project Section' className={styles.project}>
       <h2 className='font--thin'>PROJECT</h2>
     </section>
   );
