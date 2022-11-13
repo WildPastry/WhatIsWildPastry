@@ -1,5 +1,6 @@
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import About from './pages/about/About';
+import { ETimerCounts } from './models/enums';
 import Footer from './components/layout/footer/Footer';
 import Header from './components/layout/header/Header';
 import Home from './pages/home/Home';
@@ -17,19 +18,30 @@ const App = (): JSX.Element => {
     document.hidden ? setShowMeme(true) : null;
   };
 
+  const handleOnAction = () => {
+    setTimeout(() => {
+      setShowMeme(false);
+    }, ETimerCounts.timerShort);
+  };
+
+  const handleClick = () => {
+    setShowMeme(false);
+  };
+
+  const renderMeme = (): JSX.Element => {
+    return <Meme click={() => handleClick()} />;
+  };
+
   useIdleTimer({
-    timeout: 20000,
+    timeout: ETimerCounts.timerLong,
     onIdle: handleOnIdle,
+    onAction: handleOnAction,
     debounce: 100
   });
 
-  const renderMeme = (): JSX.Element => {
-    return <Meme />;
-  };
-
   return (
     <main aria-label='App Section'>
-      {/* {showMeme ? renderMeme() : null} */}
+      {showMeme ? renderMeme() : null}
       <Header />
       <BrowserRouter>
         <Nav />

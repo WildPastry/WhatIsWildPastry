@@ -16,3 +16,12 @@ interface IHoverSpotlight {
   width: number;
   height: number;
 }
+
+interface IMeme {
+  click: () => void;
+}
+
+interface IMemeText {
+  id: number;
+  name: string;
+}
