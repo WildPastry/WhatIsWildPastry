@@ -29,18 +29,18 @@ const App = (): JSX.Element => {
   root.className = `scroll--${String(shouldShowScrolling)}`;
 
   const handleOnIdle = () => {
-    document.hidden ? (dispatch(setScrolling(true)), setShowMeme(true)) : null;
+    document.hidden ? (dispatch(setScrolling(false)), setShowMeme(true)) : null;
   };
 
   const handleOnAction = () => {
     setTimeout(() => {
-      dispatch(setScrolling(false));
+      dispatch(setScrolling(true));
       setShowMeme(false);
     }, ETimerCounts.timerShort);
   };
 
   const handleClick = () => {
-    dispatch(setScrolling(false));
+    dispatch(setScrolling(true));
     setShowMeme(false);
   };
 
@@ -52,7 +52,7 @@ const App = (): JSX.Element => {
     timeout: ETimerCounts.timerLong,
     onIdle: handleOnIdle,
     onAction: handleOnAction,
-    debounce: 100
+    debounce: 0
   });
 
   return (
