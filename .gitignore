@@ -1,31 +1,20 @@
-# Logs
-*.log
-lerna-debug.log*
-logs
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Dependencies
-.pnp.js
-*.local
-dist
-dist-ssr
-node_modules
 
-# Editor directories and files
-!.vscode/extensions.json
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-.htaccess
-.idea
-.vscode/*
-*.njsproj
-*.ntvs*
-*.sln
-*.suo
-*.sw?
-
-# Development
-/dev
-/utilities
