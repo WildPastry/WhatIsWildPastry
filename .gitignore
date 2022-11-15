@@ -29,3 +29,8 @@ node_modules
 # Development
 /dev
 /utilities
+
+# Build
+/.cache
+/build
+public/build
