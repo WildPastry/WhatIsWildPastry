@@ -1,11 +1,11 @@
-@import '../../../styles/mixins/animation';
-@import '../../../styles/variables/colour';
+@use '../../../styles/mixins/animation';
+@use '../../../styles/variables/colour';
 
 .hover {
   cursor: none;
   &__spotlight {
-    @include animate(scaleIn, .2s, linear, 1);
-    background: $light;
+    @include animation.animate(scaleIn, .2s, linear, 1);
+    background: colour.$light;
     border-radius: 50%;
     cursor: none;
     mix-blend-mode: difference;

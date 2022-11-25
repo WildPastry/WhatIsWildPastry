@@ -1,8 +1,8 @@
-@import '../../../styles/variables/colour';
+@use '../../../styles/variables/colour';
 
 .header {
   align-items: center;
-  background: $grey-250;
+  background: colour.$grey-250;
   display: flex;
   height: 80px;
   justify-content: space-between;

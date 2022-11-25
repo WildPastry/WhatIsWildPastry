@@ -1,19 +1,19 @@
-@import './mixins/animation';
-@import './mixins/control';
-@import './variables/colour';
-@import './variables/font';
+@use './mixins/animation';
+@use './mixins/control';
+@use './variables/colour';
+@use './variables/font';
 
 // Reset
 * {
-  @include reset(0, 0, border-box, none, none);
-  font-family: $font-family;
+  @include control.reset(0, 0, border-box, none, none);
+  font-family: font.$font-family;
 }
 
 // HTML & BODY
 html,
 body {
-  background: $dark;
-  color: $light;
+  background: colour.$dark;
+  color: colour.$light;
   font-size: 100%;
   height: 100%;
   width: 100%;
@@ -27,20 +27,20 @@ body {
 
 // Selection
 ::selection {
-  color: $purple-150;
+  color: colour.$purple-150;
 }
 
 ::-moz-selection {
-  color: $purple-150;
+  color: colour.$purple-150;
 }
 
 // Scrollbar
 ::-webkit-scrollbar {
-  background: $purple;
+  background: colour.$purple;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $purple-150;
+  background: colour.$purple-150;
 }
 
 .scroll--false {
@@ -80,7 +80,7 @@ h6 {
 a,
 a:hover,
 a:visited {
-  color: $purple-150;
+  color: colour.$purple-150;
 }
 
 // Paragraph
@@ -91,26 +91,26 @@ p {
 // Font styles
 .font {
   &--normal {
-    font-style: $font-normal;
+    font-style: font.$font-normal;
   }
   &--italic {
-    font-style: $font-italic;
+    font-style: font.$font-italic;
   }
 }
 
 // Font weights
 .font {
   &--thin {
-    font-weight: $font-thin;
+    font-weight: font.$font-thin;
   }
   &--light {
-    font-weight: $font-light;
+    font-weight: font.$font-light;
   }
   &--regular {
-    font-weight: $font-regular;
+    font-weight: font.$font-regular;
   }
   &--heavy {
-    font-weight: $font-heavy;
+    font-weight: font.$font-heavy;
   }
 }
 

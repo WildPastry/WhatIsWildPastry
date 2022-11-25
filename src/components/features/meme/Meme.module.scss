@@ -1,8 +1,8 @@
-@import '../../../styles/variables/colour';
+@use '../../../styles/variables/colour';
 
 .meme {
   align-items: center;
-  background: $black;
+  background: colour.$black;
   bottom: 0;
   cursor: pointer;
   display: flex;
