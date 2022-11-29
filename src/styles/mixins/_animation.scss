@@ -1,0 +1,31 @@
+// Animation shorthand
+@mixin animate($animation,$duration,$method,$times){
+  animation: $animation $duration $method $times;
+}
+
+// Keyframes
+@mixin keyframes($name){
+  @keyframes #{$name}{
+      @content;
+  }
+}
+
+// Scale in
+@include keyframes(scaleIn) {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+// Fade in
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}

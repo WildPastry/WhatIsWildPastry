@@ -1,0 +1,15 @@
+@use '../../../styles/mixins/animation';
+@use '../../../styles/variables/colour';
+
+.hover {
+  cursor: none;
+  &__spotlight {
+    @include animation.animate(scaleIn, .2s, linear, 1);
+    background: colour.$light;
+    border-radius: 50%;
+    cursor: none;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: absolute;
+  }
+}

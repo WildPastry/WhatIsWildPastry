@@ -1,10 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import counter from '../slices/counterSlice';
 import loading from '../slices/loadingSlice';
+import scrolling from '../slices/scrollingSlice';
 
 const rootReducer = combineReducers({
-  counter,
-  loading
+  loading,
+  scrolling
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

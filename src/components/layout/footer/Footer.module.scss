@@ -1,0 +1,9 @@
+@use '../../../styles/variables/colour';
+
+.footer {
+  align-items: center;
+  background: colour.$grey-250;
+  display: flex;
+  height: 200px;
+  margin-top: 15px;
+}

@@ -1,0 +1,131 @@
+@use './mixins/animation';
+@use './mixins/control';
+@use './variables/colour';
+@use './variables/font';
+
+// Reset
+* {
+  @include control.reset(0, 0, border-box, none, none);
+  font-family: font.$font-family;
+}
+
+// HTML & BODY
+html,
+body {
+  background: colour.$dark;
+  color: colour.$light;
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+// Root
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+// Selection
+::selection {
+  color: colour.$purple-150;
+}
+
+::-moz-selection {
+  color: colour.$purple-150;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  background: colour.$purple;
+}
+
+::-webkit-scrollbar-thumb {
+  background: colour.$purple-150;
+}
+
+.scroll--false {
+  overflow: hidden;
+}
+
+.scroll--true {
+  overflow: auto;
+}
+
+// Headings
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+// Links
+a,
+a:hover,
+a:visited {
+  color: colour.$purple-150;
+}
+
+// Paragraph
+p {
+  font-size: 1.125rem;
+}
+
+// Font styles
+.font {
+  &--normal {
+    font-style: font.$font-normal;
+  }
+  &--italic {
+    font-style: font.$font-italic;
+  }
+}
+
+// Font weights
+.font {
+  &--thin {
+    font-weight: font.$font-thin;
+  }
+  &--light {
+    font-weight: font.$font-light;
+  }
+  &--regular {
+    font-weight: font.$font-regular;
+  }
+  &--heavy {
+    font-weight: font.$font-heavy;
+  }
+}
+
+// Icon sizes
+.icon {
+  &--small {
+    height: 15px;
+    width: 15px;
+  }
+  &--regular {
+    height: 30px;
+    width: 30px;
+  }
+  &--large {
+    height: 100px;
+    width: 100px;
+  }
+}
