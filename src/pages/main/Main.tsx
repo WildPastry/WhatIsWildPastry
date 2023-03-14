@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import About from '../about/About';
 import { AppState } from '../../redux/store';
 import Loading from '../../components/features/loading/Loading';
 import { setLoading } from '../../redux/slices/loadingSlice';
@@ -40,7 +41,9 @@ const Main: React.FC = (): JSX.Element => {
             onTransitionEnd={() => setLoader(false)}>
             <Loading />
           </section>
-        ) : null}
+        ) : (
+          <About />
+        )}
       </main>
     );
   };
