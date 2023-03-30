@@ -28,18 +28,18 @@ const App = (): JSX.Element => {
   const root = document.getElementById('root') as HTMLElement;
   root.className = `scroll--${String(shouldShowScrolling)}`;
 
-  const handleOnIdle = () => {
+  const handleOnIdle = (): void => {
     document.hidden ? (dispatch(setScrolling(false)), setShowMeme(true)) : null;
   };
 
-  const handleOnAction = () => {
+  const handleOnAction = (): void => {
     setTimeout(() => {
       dispatch(setScrolling(true));
       setShowMeme(false);
     }, ETimerCounts.timerShort);
   };
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     dispatch(setScrolling(true));
     setShowMeme(false);
   };
