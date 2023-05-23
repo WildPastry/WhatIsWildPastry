@@ -30,13 +30,46 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g npm-check-updates
-          npm install
 
-      - name: Update packages
+      - name: Check for updates
         run: |
           ncu -u
-          npm install --force
-          git commit -m "Auotomated version control" package.json
 
-      - name: Push updates
-        run: git push origin ${{ github.ref_name }}
+      - name: Check working directory
+        id: check_dir
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "Files ready to commit, run the next job."
+            echo "::set-output name=status::true"
+          else
+            echo "Working directory clean, exit the job."
+            echo "::set-output name=status::false"
+          fi
+
+      - name: Bump versions
+        if: "${{ steps.check_dir.outputs.status == 'true' }}"
+        run: |
+          npm i
+          git add .
+          git commit -m "Automated version control"
+          git push origin ${{ github.ref_name }}
+          GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}"
+            REPO_OWNER="${{ github.repository_owner }}"
+            REPO_NAME="${{ github.event.repository.name }}"
+
+            PR_LIST=$(curl -s -X GET \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls?state=open&labels=dependencies")
+
+            for PR in $(echo "$PR_LIST" | jq -r '.[].number'); do
+              curl -s -X POST \
+                -H "Authorization: Bearer $GITHUB_TOKEN" \
+                -H "Accept: application/vnd.github.v3+json" \
+                -d '{"state": "closed"}' \
+                "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls/$PR"
+            done
+
+      - name: Skipping version bump
+        if: "${{ steps.check_dir.outputs.status == 'false' }}"
+        run: echo Skipping version bump
