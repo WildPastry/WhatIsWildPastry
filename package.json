@@ -19,7 +19,7 @@
     "isotope-layout": "^3.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "^4.9.0",
     "react-idle-timer": "^5.6.2",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.2"
@@ -33,7 +33,7 @@
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
-    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@vitejs/plugin-react": "^4.0.0",
     "@wildpastry/eslint-config": "^1.6.4",
     "eslint": "^8.41.0",
