@@ -34,7 +34,7 @@
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react": "^4.0.1",
     "@wildpastry/eslint-config": "^1.6.4",
     "eslint": "^8.42.0",
     "eslint-plugin-prettier": "^4.2.1",
