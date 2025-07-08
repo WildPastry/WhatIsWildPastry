@@ -33,7 +33,7 @@
     "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@vitejs/plugin-react": "^4.6.0",
     "@wildpastry/eslint-config": "^1.7.9",
     "eslint": "^9.30.1",
@@ -47,6 +47,6 @@
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
-    "vite": "^7.0.0"
+    "vite": "^7.0.2"
   }
 }
