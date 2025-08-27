@@ -15,38 +15,38 @@
     "test": "jest"
   },
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "isotope-layout": "^3.0.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-idle-timer": "^5.7.2",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.8.1"
+    "react-router-dom": "^7.8.2"
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^2.8.2",
-    "@testing-library/jest-dom": "^6.7.0",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.3.0",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "@typescript-eslint/eslint-plugin": "^8.39.1",
-    "@vitejs/plugin-react": "^5.0.0",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@vitejs/plugin-react": "^5.0.1",
     "@wildpastry/eslint-config": "^1.7.9",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
     "jest": "^30.0.5",
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom": "^30.0.5",
     "prettier": "^3.6.2",
-    "sass": "^1.90.0",
+    "sass": "^1.91.0",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "vite": "^7.1.2"
+    "vite": "^7.1.3"
   }
 }
