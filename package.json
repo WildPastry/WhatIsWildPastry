@@ -35,7 +35,7 @@
     "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.53.0",
     "@vitejs/plugin-react": "^5.1.2",
-    "@wildpastry/eslint-config": "^1.7.9",
+    "@wildpastry/eslint-config": "^1.8.3",
     "eslint": "^9.39.2",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
