@@ -22,7 +22,7 @@
     "react-icons": "^5.5.0",
     "react-idle-timer": "^5.7.2",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.12.0"
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^2.11.2",
