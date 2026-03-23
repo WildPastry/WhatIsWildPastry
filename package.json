@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^8.57.1",
     "@vitejs/plugin-react": "^6.0.1",
     "@wildpastry/eslint-config": "^1.8.9",
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
     "jest": "^30.3.0",
