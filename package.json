@@ -20,9 +20,9 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icons": "^5.6.0",
-    "react-idle-timer": "^5.7.2",
+    "react-idle-timer": "^5.7.3",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.13.1"
+    "react-router-dom": "^7.13.2"
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^2.11.2",
@@ -33,10 +33,10 @@
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
     "@vitejs/plugin-react": "^6.0.1",
     "@wildpastry/eslint-config": "^1.8.9",
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
     "jest": "^30.3.0",
@@ -46,7 +46,7 @@
     "sass": "^1.98.0",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "vite": "^8.0.0"
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3"
   }
 }
