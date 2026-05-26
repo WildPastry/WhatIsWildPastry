@@ -33,7 +33,7 @@
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.59.4",
+    "@typescript-eslint/eslint-plugin": "^8.60.0",
     "@vitejs/plugin-react": "^6.0.2",
     "@wildpastry/eslint-config": "^1.8.9",
     "eslint": "^10.4.0",
@@ -43,10 +43,10 @@
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "prettier": "^3.8.3",
-    "sass": "^1.99.0",
-    "ts-jest": "^29.4.10",
+    "sass": "^1.100.0",
+    "ts-jest": "^29.4.11",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "vite": "^8.0.13"
+    "vite": "^8.0.14"
   }
 }
