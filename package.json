@@ -43,7 +43,7 @@
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "prettier": "^3.9.6",
-    "sass": "^1.101.3",
+    "sass": "^1.102.0",
     "ts-jest": "^29.4.11",
     "ts-node": "^10.9.2",
     "typescript": "^7.0.2",
